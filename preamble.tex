@@ -2,6 +2,11 @@
 \usepackage{fancyhdr}
 \usepackage{marginnote}
 \usepackage{subfiles}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{mhchem}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -15,3 +20,10 @@
 }
 
 \reversemarginpar
+
+\setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\sisetup{range-phrase=-,range-units=single}
+\DeclareSIUnit{\molar}{M}
+
+\usepackage{subfiles}
