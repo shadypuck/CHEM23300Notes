@@ -1,12 +1,12 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
 \usepackage{marginnote}
-\usepackage{subfiles}
 \usepackage{enumitem}
 \usepackage{siunitx}
-\usepackage{graphicx}
+\usepackage{graphicx,tikz}
+\usepackage{subcaption,float}
 \usepackage{amsmath,amssymb}
-\usepackage{mhchem}
+\usepackage{mhchem,chemfig}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -22,8 +22,21 @@
 \reversemarginpar
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
+\setitemize[4]{label={\tikz[scale=0.06,baseline={(0,-0.14)}]{
+    \draw [line width=0.3pt] (0,1) -- (1.2,0) -- (0,-1) -- (3.5,0) -- cycle;
+    \fill (1.2,0) -- (0,-1) -- (3.5,0);
+}}}
 
 \sisetup{range-phrase=-,range-units=single}
 \DeclareSIUnit{\molar}{M}
+\DeclareSIUnit{\angstrom}{\text{\AA}}
+\DeclareSIUnit{\calorie}{cal}
+
+\usetikzlibrary{positioning}
+
+\DeclareMathOperator{\pH}{pH}
+\DeclareMathOperator{\pKa}{p\textit{K}_a}
+
+\setchemfig{atom sep=2em,bond offset=2pt,cram width=2pt,bond join=true}
 
 \usepackage{subfiles}
