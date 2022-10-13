@@ -1,12 +1,19 @@
 \usepackage[margin=1in]{geometry}
+\usepackage{csquotes}
 \usepackage{fancyhdr}
 \usepackage{marginnote}
 \usepackage{enumitem}
+\usepackage{scrextend}
+\usepackage[bottom]{footmisc}
 \usepackage{siunitx}
+\usepackage[style=apa]{biblatex}
 \usepackage{graphicx,tikz}
 \usepackage{subcaption,float}
 \usepackage{amsmath,amssymb}
 \usepackage{mhchem,chemfig}
+\usepackage[hidelinks]{hyperref}
+
+\MakeOuterQuote{"}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -27,10 +34,16 @@
     \fill (1.2,0) -- (0,-1) -- (3.5,0);
 }}}
 
+\deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
+\deffootnote[1.8em]{0em}{0em}{\textsuperscript{\thefootnote}}
+
 \sisetup{range-phrase=-,range-units=single}
 \DeclareSIUnit{\molar}{M}
 \DeclareSIUnit{\angstrom}{\text{\AA}}
 \DeclareSIUnit{\calorie}{cal}
+
+\addbibresource{../main.bib}
+\DefineBibliographyStrings{english}{bibliography={References}}
 
 \usetikzlibrary{positioning}
 
