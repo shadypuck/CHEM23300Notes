@@ -1,0 +1,300 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{3}
+
+\begin{document}
+
+
+
+
+\chapter{Structural Biology}
+\section{Tools of Structural Biology}
+\begin{itemize}
+    \item Today's lecture, for time's sake, will not focus on structural biology so much as it will focus on the \emph{tools} of structural biology.
+    \item \textbf{Structural biology}: The determination of the 3D structures of biomolecules and the study of their structure-function relationships, aimed at understanding the molecular mechanisms of biomolecules' functions and interactions.
+    \item Today, we will focus on X-ray crystallography, NMR, and electron microscopy.
+    \begin{itemize}
+        \item These are direct methods for the determination of 3D structure.
+    \end{itemize}
+    \item Different length scales in biology.
+    \begin{itemize}
+        \item E.g., small molecules through eukaryotic cells.
+        \item Different techniques have different ranges over which they can be useful for determining structure.
+        \item NMR, then X-ray crystallography, then single particle cryo-EM, then cryo-electron tomography (for organelles), then light microscopy (from small to large).
+    \end{itemize}
+    \item X-ray diffraction played an essential role in the early days of molecular biology.
+    \begin{itemize}
+        \item Before crystallography, X-rays were still used to detect and describe compounds such as keratin from hair.
+        \item Based on these diffraction patterns, Pauling was able to describe the basic elements of protein structure (e.g., $\alpha$-helices and $\beta$-pleated sheets).
+        \begin{itemize}
+            \item Pauling was able to guess the structures from very rudimentary, blurry data, such as\dots
+            \begin{itemize}
+                \item \SI{9.6}{\angstrom}: Radius of an $\alpha$-helix;
+                \item \SI{4.6}{\angstrom}: The distance between hydrogen-bonded strands in a $\beta$-pleated sheet.
+            \end{itemize}
+            \item This is what made Pauling a great chemist.
+        \end{itemize}
+        \item Rosalind Franklin's photograph 51. \SI{3.4}{\angstrom} corresponds to the stacking between the bases.
+        \begin{itemize}
+            \item UChicago has a graduate course dedicated to interpreting X-ray diffraction patterns.
+            \item Zhao recommends we read Watson and Crick's original 1953 paper: "Molecular Structure of Nucleic Acids: A structure for Deoxyribose Nucleic Acid."
+            \item Dickerson in 1980: Crystal structure analysis of a complete turn of B-DNA.
+            \item Review by Eisenberg in 2003: The discovery of the $\alpha$-helix and $\beta$-sheet, the principal structural features of proteins.
+            \begin{itemize}
+                \item Eisenberg was Zhao's grad mentor.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \item Modern X-ray crystallography.
+    \begin{itemize}
+        \item Dickerson crystallized DNA, took an X-ray diffraction pattern, and thus was able to determine the position of every atom in DNA.
+        \item In-house X-ray sources vs. synchrotron X-ray sources, like the over \SI{1}{\kilo\meter} loop building at Argonne, used for biomolecule characterization.
+    \end{itemize}
+    \item Examples of high-quality protein single crystals shown.
+    \item Workflow for macromolecular crystallography.
+    \begin{itemize}
+        \item Grow a crystal, take it to a synchrotron, do an exposure to X-rays, rotate the crystal a degree or two, and do another exposure. Zhao had to fly from LA to Chicago to use Argonne's synchrotron while in grad school!
+        \item From this "movie" of exposures, you can get the electron structure and, with practice, resolve that into amino acids and other atoms.
+        \item You then fold the atom/amino acid sequence into a protein.
+        \item This whole workflow takes about 1 day today.
+        \item In the 80s-90s, this would be a graduate student's 4-5 year project and, if successful, would likely result in a \emph{Nature} publication.
+    \end{itemize}
+    \item Bottlenecks of macromolecular chemistry.
+    \begin{itemize}
+        \item You need to clone the gene and express it to get the protein (most proteins, save a few such as RuBisCO, cannot be purified in sufficient quantities from natural sources). Cloning success rate: 100\%. Expression success rate: 66\%.
+        \item Then you need to purify it. Success rate: 35\%.
+        \item Then you need to grow diffraction-quality crystals or take an NMR spectrum. Success rate: 29.5\%.
+        \item The latter two are the biggest bottle necks; you lose a lot of your starting material in each one.
+        \item Crystallization is difficult because (most) proteins did not evolve to be crystallized, they evolved to function.
+    \end{itemize}
+    \item The future of X-ray crystallography.
+    \begin{itemize}
+        \item Argonne is the best synchrotron in the United States.
+        \item X-ray free electron laser (xFEL). LCLS (Linear Coherent Light Source) close to Stanford. 2-mile tunnel under the 280. You shoot electrons down a tube, vibrate them with magnets along the length of the tunnel so that they emit X-rays, trap the electrons at the end, and then just make use of the directed light. You get a super powerful beam (a billion times stronger than third generation synchrotrons).
+        \item Zhou and Zhao compared resolution from APS and LCLS on the same (type of) crystal; LCLS has higher resolution.
+        \begin{itemize}
+            \item The beam is so strong that you damage the crystal though; at every point, you can only take one shot.
+        \end{itemize}
+        \item Radiation damage free-diffraction: Super fast exposure; take your diffraction before you cause damage.
+    \end{itemize}
+    \item Future of macromolecular crystallography: microED.
+    \begin{itemize}
+        \item You don't have to grow diffraction-quality crystals here (which are about \SI{5}{\micro\meter} in size).
+        \item You can use nanometer-scale crystals instead.
+        \item microED: Micro-electron diffraction.
+    \end{itemize}
+    \item NMR.
+    \begin{itemize}
+        \item You still need to purify protein, but then you do NMR sample prep, acquire data, process the spectrum, and then do structural analysis.
+        \item NMR does not give you a map; it gives you the distance between different atoms. If you have enough of these constraints, you can calculate a structure.
+        \item In chemistry, you typically collect one-dimensional spectra; in biochemistry, you typically collect three- or four-dimensional spectra.
+        \begin{itemize}
+            \item Most OChem spectra are 1-dimensional.
+            \item 2D spectra: You have to define a specific sequence to get resonance of both types of molecules together.
+            \item 3D includes one more type of atom that you want to resonate.
+            \item 4D is if you introduce some radiofrequency change over time, providing another dimension of information.
+            \item Physically, this is the most difficult technology.
+            \item The physics behind NMR is the toughest, as it dips into quantum mechanics.
+        \end{itemize}
+        \item Advantages:
+        \begin{itemize}
+            \item Protein in native environment (crystal packing in XRD might introduce artifacts).
+            \item Information on dynamic structure (more on this later).
+            \item Information on protein interaction with other biomolecules.
+            \begin{itemize}
+                \item For example, you can run an NMR of the protein and then of the protein mixed with some ligand.
+                \item This tells you how the protein interacts with the ligand.
+                \item This is a very hard experiment to run with XRD because you have to soak the crystal in ligand or ligate the protein and then crystallize it. In the words of Zhao, this is a "pain in the ass" to do.
+            \end{itemize}
+        \end{itemize}
+        \item Limitations:
+        \begin{itemize}
+            \item Isotopic labeling required (\ce{{}^13C} and \ce{{}^15N} at least).
+            \item Difficult for large proteins or complicated folding structures (if it's a large protein, you'll be stuck into a local minimum).
+            \item You need amino acid sequence information (including PTM) in advance (and the protein usually has to be \SIrange{10}{20}{\kilo\dalton}).
+        \end{itemize}
+        \item Reason to run an NMR experiment: Not for a \emph{de novo} 3D structure, but for that ligand-protein interaction.
+    \end{itemize}
+    \item NMR is good for probing interactions.
+    \begin{itemize}
+        \item Every peak in a 2D N-H spectrum corresponds to an amino acid (amide bond).
+        \item You can see a shift in proteins as they're ligated.
+    \end{itemize}
+    \item The future of NMR.
+    \begin{itemize}
+        \item Feed a cell nutrients and take an NMR of a whole cell.
+    \end{itemize}
+    \item Recent revolution in structural biology.
+    \begin{itemize}
+        \item 2017 Nobel prize for cryoEM\footnote{What dad mentioned years ago?}.
+    \end{itemize}
+    \item Two major techniques: SPA and CryoET.
+    \begin{itemize}
+        \item SPA is single-particle analysis. Embed viri in a tray, take a 2D projection, do FTs, and reconstruct the 3D structure. Multiple particles averaged.
+        \item Cryo-electron tomography/STA (single tilt analysis; there used to be double tilt analysis but it was too hard to keep the stage stable): Focus on one single particle, but tilt the stage within the microscope. Usually used to look at subcellular organelles.
+        \item SPA is already comparable to XRD in its ability to generate atomic-level resolution.
+        \item Workflow: Aqueous solution $\to$ sample vitrification (rapid cooling) $\to$ low-dose image collection by cryoEM $\to$ SPA or cryoEM $\to$ structure.
+    \end{itemize}
+    \item Methods for SPA have been developed for decades.
+    \begin{itemize}
+        \item Began in the 1970s with reconstruction of an icosahedral structure.
+        \item Modern cryoEM began around 2011.
+    \end{itemize}
+    \item Problems that prevented high-resolution cryoEM reconstruction.
+    \begin{itemize}
+        \item Radiation damage: Only limited amount of electron dose can be used since light atoms, e.g., hydrogens can be damaged.
+        \item Bad detection: Only limited amount of signal is recorded.
+        \item Beam-induced motion: Hard to avoid.
+        \item Sample heterogeneity: No crystal lattice as constraints.
+        \item Problems 1-3 were solved with a good camera in 2012. Multiple exposures aligned and averaged (take multiple shots [a movie] over 4-5 seconds and then align the relative positions and average).
+    \end{itemize}
+    \item Direct electron direction camera.
+    \begin{itemize}
+        \item Used to use a CCD camera. The screen of an electron microscope shows a green fluorescent image\footnote{Think of the TEM machine in the GCIS sub-basement.}; to digitize the image, we use a CCD camera; detects photons only, so we convert electrons to photons with a scintillator. This causes a lot of signal loss, though, because of the conversion.
+        \item The invention of DDC gets rid of the scintillator and fiber-optic coupling, allowing literal direct detection of electrons.
+        \item DQE: Detective Quantum Efficiency goes up.
+    \end{itemize}
+    \item SPA revolution.
+    \begin{itemize}
+        \item The structures that SPA focused on were ones that were very difficult or impossible to crystallize.
+        \item People have tried to crystallize membrane proteins for decades, but in 2010, SPA cryoEM gave another way.
+    \end{itemize}
+    \item Workflow for single-particle cryoEM.
+    \begin{itemize}
+        \item Prepare the sample and then plunge it into liquid ethane.
+        \item Ethane has a very large heat capacity (not liquid nitrogen). We don't want crystalline ice; we want vitrous ice, so that the ice crystal doesn't affect the experiment.
+    \end{itemize}
+    \item Advantages of cryoEM analysis:
+    \begin{itemize}
+        \item Removes the crystallization bottleneck.
+        \item Dynamics can show you different states of a molecule.
+        \item For example, this is how we figured out the different conformations/rotation of ATP synthase.
+    \end{itemize}
+    \item Future of cryoEM: Cryo-electron tomography.
+    \begin{itemize}
+        \item Currently mainly used to look at larger structures, e.g., organelles.
+        \item Used to study how SARS-CoV-2 infects cells.
+        \begin{itemize}
+            \item Allows for a better understanding of its S-proteins, as well.
+        \end{itemize}
+    \end{itemize}
+    \item CryoEM's limitations.
+    \begin{itemize}
+        \item The sample cannot be too thick.
+        \item A eukaryotic cell is typically too thick.
+        \item Circumventing this: FIB milling (focused ion beam). Takes off part of the cell.
+        \item Put everything in an SEM (to guide your progress), do the milling, and then transfer to a TEM.
+    \end{itemize}
+    \item Comparison of structural biology techniques.
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \setlength\tabcolsep{1pt}
+        \tabulinestyle{0.1pt}
+        \begin{tabu}{c|c|[0.8pt]c|c|c|c|c}
+            \multicolumn{2}{c|[0.8pt]}{} & \begin{tabular}{c}\textbf{single-particle}\\[-5pt] \textbf{cryoEM}\end{tabular} & \begin{tabular}{c}\textbf{X-ray}\\[-5pt] \textbf{crystallography}\end{tabular} & \textbf{xFEL} & \textbf{microED} & \textbf{NMR}\\
+            \tabucline[0.8pt]{-}
+            \multirow{2}{*}{\textbf{Setup}} & imaging source & electron & X-ray & X-ray & electron & \begin{tabular}{c}Magnetic field\\[-5pt] and RF pulses\end{tabular}\\
+            \tabucline{2-}
+             & lens system & yes & no & no & yes & no\\
+            \tabucline{-}
+            \multirow{2}{*}{\textbf{Sample}} & form & solution & crystal & \begin{tabular}{c}micro-xtal / xtal\\[-5pt] in cell\end{tabular} & micro-xtal & solution\\
+            \tabucline{2-}
+             & quantity & low & high & high & low & high\\
+            \tabucline{-}
+            \multirow{3}{*}{\textbf{Throughput}} & sample screen & low & high & high & low & low\\
+            \tabucline{2-}
+             & data collection & days & minutes & hours to days & hours & days\\
+            \tabucline{2-}
+             & data processing & weeks & days & days-weeks & days & weeks\\
+            \tabucline{-}
+            \multirow{3}{*}{\textbf{Limit}} & resolution & up to \SI{1.2}{\angstrom} & better than \SI{1.0}{\angstrom} & better than \SI{1.0}{\angstrom} & better than \SI{1.0}{\angstrom} & N/A\\
+            \tabucline{2-}
+             & MW & $>\SI{60}{\kilo\dalton}$ & no & no & no & $<\SI{100}{\kilo\dalton}$\\
+            \tabucline{-}
+            \multicolumn{2}{c|[0.8pt]}{\textbf{Pain Point}} & \begin{tabular}{c}screen freezing\\[-5pt] conditions\end{tabular} & growing crystals & \begin{tabular}{c}growing a ton of\\[-5pt] micro-xtals\end{tabular} & \begin{tabular}{c}growing micro-\\[-5pt] xtals\end{tabular} & isotopic labeling\\
+            \tabucline{-}
+            \multicolumn{2}{c|[0.8pt]}{\textbf{Unique Benefit}} & multiple states & \begin{tabular}{c}anomalous\\[-5pt] scattering\end{tabular} & \begin{tabular}{c}radiation\\[-5pt] damage free\end{tabular} & few micro-xtals & \begin{tabular}{c}dynamic\\[-5pt] information\end{tabular}\\
+        \end{tabu}
+        \caption{Comparison of structural biology techniques.}
+        \label{tab:structuralBiologyTechniques}
+    \end{table}
+    \item Graduate course (though 1-2 undergrads take it every year): BCMB 32600 Methods in Structural Biology.
+    \begin{itemize}
+        \item Did SARS-CoV-2 last time.
+    \end{itemize}
+    \item Quick survey of Cross-$\beta$ diffraction pattern and amyloid.
+    \begin{itemize}
+        \item Zhao's research topic as a graduate student.
+        \item Difference between $\beta$-pleated sheets (XRD points expand out linearly) and cross-$\beta$ patterns (XRD points expand out perpendicularly), the latter of which are generated by amyloids.
+        \item Eisenberg published seven peptides whose structure they determined with XRD and which ran perpendicular to the fibers.
+        \item Fibers are like 1D crystals which are very hard to crystallize. Breakthrough in 2015: used microED to determine the structures of the very small "invisible" (under light microscope) crystals.
+        \item Solid-state NMR helps, too.
+        \item cryoEM helps more.
+    \end{itemize}
+    \item Nobel prizes in 1962.
+    \begin{itemize}
+        \item Crick was a grad student of Perutz; Perutz and Kendrew determined the first crystal structures of protein.
+        \item Wilkins was the mentor of Franklin; she had already passed away by 1962. She was not recognized; women are still not recognized enough.
+    \end{itemize}
+    \item Future Nobel prize in Zhao's evaluation.
+    \begin{itemize}
+        \item John Jumper (former grad student at UChi) develops AlphaFold2.
+        \begin{itemize}
+            \item Combines multiple sequence alignment (MSA, genetic information) with pair representation (distance matrix, analogous to NOE spectrum, structural geometrical information) as the input.
+            \item Introducing attention-based neural-network architecture...
+        \end{itemize}
+    \end{itemize}
+    \item Think of a neural network as a large machine with a lot of knobs.
+    \begin{itemize}
+        \item Once the knobs are tuned with existing data, the machine is capable of predicting, decoding, and analyzing unknown data.
+    \end{itemize}
+    \item AlphaFold2 data flow.
+    \begin{itemize}
+        \item The key step is MSA + pair as input.
+    \end{itemize}
+    \item Prediction of a human methyltransferase that has not been crystallized with a high confidence.
+    \begin{itemize}
+        \item AlphaFold2 predicted the structure, however! Collaboration between Zhao and Chuan He.
+    \end{itemize}
+    \item Try it with your own protein using ColabFold via Google.
+    \item Current limitations.
+    \begin{itemize}
+        \item Not implemented for nucleic acids.
+        \item Static structures.
+        \item Sequence length limit.
+        \item Insensitive to point mutations.
+        \item Poor performance for antibody recognition.
+    \end{itemize}
+    \item One critical reason why AlphaFold is so successful.
+    \begin{itemize}
+        \item The database has gotten huge in the last several decades. High quality experimental training sets are available.
+        \item Another advantage is high quality sequence technology.
+    \end{itemize}
+    \item Remaining challenges: Complex structures, dynamic structures, and intrinsically disordered proteins.
+    \begin{itemize}
+        \item Still difficult due to issues computing the energy landscape of large biological complexes.
+        \item Nuclear pore: Complex with over 1000 proteins.
+        \item Science: Volume 376, issue 6598, 10 June 2022 reviews research surrounding the nuclear pore.
+        \item How do we extract the dynamic information, regardless?
+    \end{itemize}
+    \item Is structural biology still cool?
+    \begin{itemize}
+        \item Various reasons it's still needed.
+    \end{itemize}
+    \item Last class, we talked about Ramachandran plots.
+    \begin{itemize}
+        \item Ramachandran statistics is used as a validation method in X-ray crystallography and single-particle cryoEM. Not used in AlphaFold.
+    \end{itemize}
+    \item Keep my eye on Nick Korn; seems to really know what's going on and asks good questions.
+    \item More info will be provided later on how this info will be incorporated into future exams.
+    \item Reach out to Zhao to talk more about his work! Seems very related to analytical chemistry. What is his view of the field and how my math background can help?
+\end{itemize}
+
+
+
+
+\end{document}
