@@ -336,7 +336,7 @@
         \begin{subfigure}[b]{0.19\linewidth}
             \centering
             \chemfig{H_2N-[:30](<[2]-[:30]-[2]CO\charge{45:2pt=$\ominus$}{O})-[:-30]COOH}
-            \caption{Aspartate.}
+            \caption{Glutamate.}
             \label{fig:AAchargedE}
         \end{subfigure}
         \begin{subfigure}[b]{0.19\linewidth}
@@ -483,6 +483,283 @@
             \item Has selenium instead of sulfur.
             \item Name: Selenocysteine, Sec, U.
         \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Protein Structure and Function}
+\begin{itemize}
+    \item \marginnote{10/13:}Callie: PSet should take about 3 hours.
+    \item Office hours Monday evening on Zoom.
+    \item Review of amino acids.
+    \begin{itemize}
+        \item Tang did her grad work on cysteine.
+        \item Proline the amino acid is the chiral asymmetric organocatalyst from OChem III!
+    \end{itemize}
+    \item Proline biosynthesis:
+    \begin{itemize}
+        \item Uses the precursor of glutamate and cyclization happens in the final step.
+    \end{itemize}
+    \item Amino acid properties given.
+    \begin{itemize}
+        \item Residue mass (minus \ce{H2O} because when we add peptides to the chain, we lose water [dehydration synthesis/condensation reaction]).
+        \item Van der Waals volume (related to mass).
+        \begin{itemize}
+            \item Anything else we need to know about this??
+        \end{itemize}
+        \item Frequency in proteins.
+        \begin{itemize}
+            \item There are three proteins that have six codons corresponding to them: Leu, Arg, and Ser. L does occur the most frequently, but R and S are farther down the list.
+            \item Ala has four associated codons and occurs relatively frequently.
+            \item Met and Trp have one associated codon, each, and are pretty far down the list (W is the least frequent, but His occurs less frequently than M for example).
+        \end{itemize}
+        \item Not testable: W has a relatively unique UV-Vis absorbance at \SI{280}{\nano\meter} (Phe and Tyr can contribute a bit but not much).
+        \begin{itemize}
+            \item Another way to quantify the concentration of protein in the lab is to use a \textbf{blackfield assay}.
+        \end{itemize}
+        \item Cysteine is rare because it can form disulfide bonds, so we don't want it everywhere.
+        \begin{itemize}
+            \item 2 corresponding codons.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Blackfield assay}: An assay in which you use a dye that changes color when it interacts with the protein; you then quantitatively measure the change in color.
+    \item $\pKa$'s of side-chain groups.
+    \begin{itemize}
+        \item The $\alpha$-amino and $\alpha$-carboxyl groups are not super important (they are only present at the ends of the proteins).
+        \item The negatively charged amino acids have $\pKa\approx\numrange{3.9}{4.0}$ (D) and $\pKa\approx\numrange{4.3}{4.5}$ (E), making them properly acidic.
+        \item Arg's guanidinium moiety has $\pKa\approx 12$.
+        \item Lys's amino moiety has $\pKa\approx 10$ (or a bit larger).
+        \item Thiols, imidazoles, and phenolic hydroxyls are all in the viscinity of \numrange{6}{10} as well.
+        \item $\pKa$'s are highly context dependent.
+        \begin{itemize}
+            \item Depends on electrostatic effects, H-bonding effects, and inside a protein (more difficult to ionize a residue here).
+            \item Recall the context-dependent $\pH$ of A2486 in the ribosomal mechanism (see the discussion associated with Figure \ref{fig:ribosomeMechanism}).
+        \end{itemize}
+    \end{itemize}
+    \item Main chain ionization.
+    \begin{itemize}
+        \item If $\pH<2$, everything will be protonated (\ce{NH3+}, \ce{COOH}).
+        \item If $\pH>9$, everything will be deprotonated (\ce{NH2}, \ce{COO-}).
+        \item If $2<\pH<9$, we will have the zwitterionic form (\ce{NH3+}, \ce{COO-}).
+    \end{itemize}
+    \item Table of $\pKa$.
+    \begin{itemize}
+        \item $\pKa_1$ corresponds to the carboxylic acid, $\pKa_2$ corresponds to the amine, and $\pKa_3$ corresponds to the side chain (if applicable).
+    \end{itemize}
+    \item Aspartic acid $\pH$ analysis.
+    \begin{itemize}
+        \item As the $\pH$ increases, $\alpha$-carboxylic acid is deprotonated, then the side chain carboxylic acid, then the \ce{NH3}.
+        \item We might have a test question like this.
+    \end{itemize}
+    \item Chemical environment affects $\pKa$ values.
+    \begin{itemize}
+        \item The $\alpha$-carboxy group in amino acids is much more acidic than in carboxylic acids because the conjugate base is stabilized significantly by the zwitterionic form.
+        \item The $\alpha$-amino group in amino acids is slightly less basic than in amines because the electronegative oxygen atoms of the $\alpha$-carboxy group act as EWGs.
+    \end{itemize}
+    \item Formulation of peptides.
+    \begin{itemize}
+        \item Peptides are small condensation products of amino acids.
+        \item They are "small" compared to proteins ($M_w<\SI{10}{\kilo\dalton}$).
+        \item Review of peptide bond formation (see the discussion associated with Figure \ref{fig:ribosomeMechanism}).
+        \item Overlap between "polypeptides" and "proteins."
+        \begin{itemize}
+            \item Arbitrarily, people use \SI{10}{\kilo\dalton} as a cutoff.
+        \end{itemize}
+    \end{itemize}
+    \item Peptide ends are not the same.
+    \begin{itemize}
+        \item Synthesis occurs from the N terminus to the C terminus (remember, the new amine is attacking the carboxylic acid of the previous).
+        \item Solid phase peptide synthesis occurs in the reverse direction.
+        \item You number the amino acids $\text{AA}_1,\dots,\text{AA}_n$ starting from the N terminus.
+    \end{itemize}
+    \item How do such simple building blocks result in diverse functions?
+    \begin{itemize}
+        \item Enzymes play the majority of the structure and catalysis functions in our body, e.g., enzymes, receptors, antibodies, hormones, regulatory roles, structural, etc.
+        \item A protein of 100 amino acids has $20^{100}\approx 10^{130}$ possible sequences.
+        \item An average 100 amino acid protein has a mass of \SI{14000}{\dalton}; thus, \num{e130} such molecules would have a mass of \SI{1.4e134}{\dalton}. For reference, the mass of the universe is about \SI{e80}{\dalton}.
+    \end{itemize}
+    \item Note on directed evolution.
+    \begin{itemize}
+        \item Nature has not sampled every AA sequence, but has optimized over some.
+        \item A reasonable (but still tough) sample size library to achieve is \num{e8}. Thus, the sampling space for any directed evolution experiment is necessarily limited.
+        \item Your directed evolution experiment only works because there are multiple answers in the solution space.
+    \end{itemize}
+    \item Favorable interactions in proteins.
+    \item \textbf{Hydrophobic effect}: Release of water molecules from the structured solvation layer around the molecule as protein folds increase the net entropy.
+    \item \textbf{Hydrogen bonds}: Interaction of \ce{N-H} and \ce{C=O} of the peptide bond leads to local regular structures such as $\alpha$-helices and $\beta$-pleated sheets.
+    \item \textbf{London disperson effect}: Medium-range weak attraction between all atoms contributes significantly to the stability of the interior of the protein.
+    \item \textbf{Electrostatic interactions}: Long-range strong interactions between permanently charged groups.
+    \begin{itemize}
+        \item Example: Salt bridges, especially those buried in the hydrophobic environment which strongly stabilize the protein.
+    \end{itemize}
+    \item 4 levels of protein structure.
+    \begin{itemize}
+        \item Primary: Amino acid sequence.
+        \item Secondary: $\alpha$-helix or $\beta$-pleated sheet.
+        \item Tertiary: Larger protein chunks, made of a single polypeptide chain.
+        \item Quaternary: Most proteins are made of multiple such moieties/are assembled subunits.
+    \end{itemize}
+    \item Natural protein function beyond proteinogenic amino acids.
+    \begin{itemize}
+        \item Proteinogenic amino acids have limited chemical functionality.
+        \item Natural proteins are especially bad at redox reactions.
+        \item This functionality is expanded in nature with\dots
+        \begin{enumerate}
+            \item Small molecule cofactors.
+            \begin{itemize}
+                \item Enable redox reactions and can serve as an electron sink.
+                \item Example: NADH, NADPH.
+                \item Some of these reactions may have come up in OChem III. We can also learn more about them if we take some of Tang's other courses.
+            \end{itemize}
+            \item Post-translational modification.
+            \begin{itemize}
+                \item Example: Phosphorylation.
+            \end{itemize}
+            \item Post-translational rearrangement.
+            \begin{itemize}
+                \item In GFP, for instance, we have a post-translational rearrangement between serine, glycine, and tyrosine that leads to the formation of a chromophore.
+            \end{itemize}
+        \end{enumerate}
+    \end{itemize}
+    \item The peptide bond.
+    \begin{itemize}
+        \item Carbonyl oxygen and amine hydrogen are \emph{trans}.
+        \item This is because, drawing resonance structures, we see that the peptide \ce{C-N} bond has some $\pi$ character. $p$-orbital overlap. Thus, we will say it does not rotate meaningfully.
+    \end{itemize}
+    \item The rigid peptide plane and the partially free rotations.
+    \begin{itemize}
+        \item Rotation around the peptide bond is not permitted.
+        \item Rotation around bonds connected to the $\alpha$ carbon is permitted.
+        \item $\phi$: Angle around the $\alpha$-carbon -- amide nitrogen bond.
+        \item $\psi$: Angle around the $\alpha$-carbon -- carbonyl carbon bond.
+        \item In a fully extended polypeptide, both $\psi,\phi=\ang{180}$, but this is not common.
+        \item Even without the side chain, some angles are not permitted due to sterics. Bulkier side chains narrow the allowable range still further.
+    \end{itemize}
+    \item The polypeptide is made up of a series of planes linked at the $\alpha$ carbon.
+    \item Distribution of $\phi$ and $\psi$ dihedral angles.
+    \begin{itemize}
+        \item Some $\phi$ and $\psi$ combinations are very unfavorable due to sterics.
+        \item Some $\phi$ and $\psi$ combinations are more favorable because of the chance to form favorable H-bonding interactions along the backbone.
+        \item We won't be asked to memorize any good or bad $\phi,\psi$ angles.
+    \end{itemize}
+    \item \textbf{Ramachandran plot}: A plot showing the distribution of $\phi$ and $\psi$ dihedral angles that are found in a protein.
+    \begin{itemize}
+        \item Gives the distribution of secondary strucures in the $\phi\psi$-plane.
+        \item Shows the common secondary structure elements and reveals regions with unusual backbone structure.
+        \item There are characteristic regions for $\alpha$-helices (lower left) and $\beta$-pleated sheets (upper left), but loops are harder to detect (though they may appear to some extent in the upper right).
+        \item Glycine has density in all four quadrants (it is the most flexible, after all).
+    \end{itemize}
+    \item Protein conformational space.
+    \begin{itemize}
+        \item $\phi,\psi$ describe torsional angles: $-\ang{180}<(\phi\text{ or }\psi)<\ang{180}=-\ang{180}$.
+    \end{itemize}
+    \item Secondary structure: $\alpha$ helix.
+    \begin{itemize}
+        \item Not testable, but $\phi=\ang{-57}$ and $\psi=-\ang{47}$.
+        \item Right-handed helix (just like double stranded DNA).
+        \item 3.6 residues per turn.
+        \item \SI{5.4}{\angstrom} rise per turn.
+        \item H bonds between $i,i+4$.
+        \item Proline is a good helix starter. A, R, K, L, and M are good in an $\alpha$-helix; P, G, T, and S are poor.
+        \begin{itemize}
+            \item P is too rigid, G is too flexible, and T,S have additional H-bonding donors and acceptors that might disrupt the $i,i+4$ pattern.
+        \end{itemize}
+    \end{itemize}
+    \item mRNA is more complex and weighs more than a protein.
+    \begin{itemize}
+        \item B-DNA is about \SI{28}{\angstrom} per turn, larger than the $\alpha$-helix. This makes sense since there are so many moieties involved in DNA (sugar, phosphate, base pair).
+        \item It's not like it's a small template we're using to synthesize something much larger.
+        \item Tang explores this theme in the arena of mRNA vs. protein vaccines.
+        \begin{itemize}
+            \item For COVID vaccines, we can deliver either the COVID spike protein or the mRNA. The former is a smaller thing to deliver.
+        \end{itemize}
+    \end{itemize}
+    \item Secondary Structure: Antiparallel $\beta$-sheet.
+    \begin{itemize}
+        \item Adjacent strands run in opposite directions.
+        \item Hydrogen bonds are neatly stacked one carbons apart, always.
+    \end{itemize}
+    \item Secondary Structure: Parallel $\beta$-sheet.
+    \begin{itemize}
+        \item Adjacent strands run in the same direction.
+        \item Hydrogen bonds are not neatly stacked. They are bent and evenly spaced, though.
+    \end{itemize}
+    \item Loops connect secondary structure.
+    \begin{itemize}
+        \item Usually rich in polar residues.
+        \item Loops are irregular structures.
+        \item H-bond with solvent.
+        \item Gly = common start or end.
+        \item Often contain binding sites or enzyme active sites.
+        \begin{itemize}
+            \item Loops are more flexible, so they can test out more conformations.
+            \item The lock and key model is misleading --- it's not a rigid interaction, but rather the protein adjusts when the substrate binds.
+        \end{itemize}
+    \end{itemize}
+    \item Higher order protein structures.
+    \begin{itemize}
+        \item $\alpha$-helix, loop, $\beta$-strand $\to$ motif $\to$ domain $\to$ protein.
+    \end{itemize}
+    \item \textbf{Tertiary structure}: Overall 3D structure of the protein; describes how the peptide chains fold and pack.
+    \begin{itemize}
+        \item Covalent structures (peptide, disulfide bonds).
+        \item Hydrogen bonds, hydrophobic interactions, electrostatic interactions, and van der Waals interactions.
+        \item Recall that disulfide bonds bring distal ends of a protein together.
+    \end{itemize}
+    \item Quaternary structures are formed of multiple tertiary motifs.
+    \item \textbf{Enzyme catalysis}: Enzymes are protein catalysts of biologically relevant chemical reactions and typically display a high efficieency and selectivity.
+    \begin{itemize}
+        \item Part of \textbf{mechanistic enzymology} (which Tang used to cover).
+        \item Enzymes can accelerate some reactions by 17 orders of magnitude.
+        \item Enzymes are typically highly selective.
+        \item Enzymes function either by stabilizing the transition state of a reaction more than they stabilize the ground state of the substrate or by providing an alternative reaction pathway (mechanism) that involves a lower activation barrier.
+    \end{itemize}
+    \item One example of enzymatic catalysis: Protease (also called a peptidase or proteinase) is an enzyme that catalyzes the hydrolysis of a protein amide bond.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/serineProteasea.png}
+            \caption{Step 1.}
+            \label{fig:serineProteasea}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.8\linewidth]{../ExtFiles/serineProteaseb.png}
+            \caption{Step 2.}
+            \label{fig:serineProteaseb}
+        \end{subfigure}
+        \caption{Serine protease.}
+        \label{fig:serineProtease}
+    \end{figure}
+    \begin{itemize}
+        \item There is either 1-step or 2-step protease catalysis.
+        \begin{itemize}
+            \item In 1-step, an acidic side chain (e.g., D, E, or a metal ion [perhaps bound to N or Q]) activates a water molecule to attack the peptide bond.
+            \item In 2-step, a nucleophilic side chain (e.g., C, S, or T) splits the peptide bond and then water comes in to break off the side chain from the carbonyl derivative.
+        \end{itemize}
+        \item Serine protease is a classic example of a protein participating in catalysis covalently; a good example in protein engineering, where it can be developed into a ligase.
+        \item Serine protease has a catalytic triad within the active site.
+        \begin{itemize}
+            \item Histidine (good for its proton shuffle ability) deprotonates serine protease.
+            \item The now positively charged histidine is stabilized by the negatively charged aspartate (though protonation/deprotonation does not occur).
+            \item Now that serine has been deprotonated, it is an excellent nucleophile and can attack the peptide amide via nucleophilic acyl substitution. The departing amine grabs an extra proton back from histadine.
+            \item In step 2, we have another histadine-involved deprotonation to start, but this time of water.
+            \item The lone hydroxyl group then attacks the serine-bonded amino acid's carbonyl group again, doing a transesterification nucleophilic acyl substitution, and serine regenerates itself from the histadine proton.
+        \end{itemize}
+        \item Note that most serine proteases come with a specificity pocket that recognizes one specific type of amino acid at which we want to cleave the peptide bond.
+        \item Serine proteases are quite important.
+        \item Penicillin (the antibiotic) works by inhibiting a kind of serine protease in bacteria (a transpeptidase used to build the cell wall) that's not found in humans. This makes it so that bacteria cannot construct their cell walls.
+    \end{itemize}
+    \item Lecture summary.
+    \begin{itemize}
+        \item 20 natural amino acids offer different features.
+        \item Post-translational modifications and rearrangements expand the functional repertoire of proteins.
+        \item Protein structure is determined by the nature of the amide bond and by at least four noncovalent interactions (and disulfide bonds).
+        \item Natural protein structures are highly modular (helix, sheet, loop; motif; domain; protein) and typically satisfy several constraints.
+        \item Side chain structure determine accessible conformational space at each peptide bond.
+        \item A subset of proteins serve as catalysts for chemical conversions by lowering the activation barrier.
     \end{itemize}
 \end{itemize}
 
