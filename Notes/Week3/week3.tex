@@ -1,0 +1,492 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{2}
+
+\begin{document}
+
+
+
+
+\chapter{Proteins}
+\section{Amino Acids, Peptides, and Protein Synthesis}
+\begin{itemize}
+    \item \marginnote{10/11:}Initial impressions of the homework: More difficult than expected.
+    \begin{itemize}
+        \item Tang did not raise the difficulty of the course, but was told to in course evals two years ago.
+        \item Literature problems: People believe reading the papers did help with the questions. We should be able to do these problems without the papers, though --- some of these problems are past exam problems and were expected to be answered in a closed-book setting. We can expect similar questions on exams this year. Purpose: Show us how concepts from the class are used in research.
+    \end{itemize}
+    \item There will be a practice exam posted.
+    \item We can bring a one-page (single-sided A4) review sheet to the exam.
+    \item OH Monday via Zoom.
+    \item For every Thursday midterm, the content from the preceding Tuesday will not be covered.
+    \item \textbf{Lesion}: Something bad that your cell will recognize and repair.
+    \item Types of lesions:
+    \begin{itemize}
+        \item Double-stranded breaks, mismatches, pyrimidine dimers, and damaged bases.
+        \item Are mutations lesions? It depends.
+        \begin{itemize}
+            \item If the mutation is a mismatch, there will be a repair.
+            \item If it shows up as matched, your cell will not know to repair it.
+        \end{itemize}
+        \item DNA modifications.
+        \begin{itemize}
+            \item Damaged backbones (e.g., pyrimidine dimers or a methyl group on the $O^6$ of guanine). Things your cells know shouldn't be there. Will be repaired.
+            \item However, there can also be intentionally placed modifications on DNA to regulate it. These will not be repaired.
+        \end{itemize}
+        \item Bulges don't usually occur during synthesis, but they can occur during recombination. These will definitely be repaired.
+        \item This should clarify some points on the homework.
+    \end{itemize}
+    \item Natural base modification in mRNA.
+    \begin{itemize}
+        \item mRNA is less diversely modified than tRNA and rRNA, but mRNA modifications do still happen.
+        \item Most abundant internal modifications in mammalian mRNA: $N^6$-methyladenosine (\ce{m^6A}).
+        \begin{itemize}
+            \item There's on average 1-3 of these per mRNA. However, there can still be 0.
+            \item How it's detected: Highly related to ChIP-Seq. You fragment your DNA, introduce antibodies that will bind to \ce{m^6A}, do immunoprecipitation for a specific DNA binding protein to enrich the target DNA sequence, and sequence both the input and the enriched pool. The sequences that got enriched are the ones that carry the modification.
+        \end{itemize}
+        \item 5-methylcytosine (\ce{m^5C}) and pseudouridine ($\psi$) are also present in mRNA, but their functions are less well studied.
+        \begin{itemize}
+            \item Pseudouridine is a flipped uracil base with a carbon connected to ribose instead of a nitrogen connected to ribose.
+            \item The W-C interaction surface is basically unchanged, though, so it will still be detected as U. However, it has alternate regulatory functions, such as helping ribosomes read through premature stop codons.
+            \item The $\psi$ detection method is messy (noisy): Introduce a chemical that selectively reacts with pseudouridine and gives a stop-signal during transcription. Not testable.
+            \item 5mC detection for RNA is identical to for DNA (bisulfite chemistry --- see the discussion associated with Figure \ref{fig:bisulfite}). Note, however, that since RNA is less stable, more will decompose upon heating; thus, you need a larger initial sample size.
+        \end{itemize}
+        \item In addition to \ce{m^6A}, \ce{m^5C}, and $\psi$, other base modifications can occur (we are not responsible for these, though).
+    \end{itemize}
+    \item Summary of what we've learned so far:
+    \begin{itemize}
+        \item DNA synthesis and transcription (the $\text{DNA}\to\text{RNA}$ part of the central dogma).
+        \item DNA methylation and epigenetics.
+        \item mRNA methylation and epitranscriptomics.
+        \item These three things function as a network (many feedback mechanisms). Moving forward, we will add proteins and metabolites to this network.
+    \end{itemize}
+    \item Not testable: Arms race between bacteria and bacteriophages.
+    \begin{itemize}
+        \item Answers how weird DNA modifications develop.
+        \item Bacteriophages are the most abundant life organism on this earth.
+        \item Round 1: Bacteria evolve restriction enzymes and base modification X; purpose: cleave phage DNA while avoiding suicide.
+        \item Round 2: Phages evolve X or Y modification in DNA; purpose: escape cleavage.
+        \item Round 3: Bacteria evolve X/Y-dependent restriction enzymes and additional self base modification Z; purpose: cleave phage DNA while avoiding suicide.
+        \item And on and on.
+    \end{itemize}
+    \item Diverse base modifications in bacteriophages.
+    \begin{itemize}
+        \item Guanine converts $N^7$ to a carbon and adds a functional group; you need multiple modifications to get to this result (called deoxyarchaeosine).
+        \item Cytosine attaches to glucose instead of deoxyribose.
+        \item Some bacteriophage DNA/RNA base modifications overlap with those in higher organisms, who evolve these modifications for completely different reasons.
+        \item And more.
+    \end{itemize}
+    \item We are now done with last lecture's content; we are moving onto amino acids, peptides, and proteins.
+    \begin{itemize}
+        \item Note that many of the mechanisms of RNA are more complicated than those of proteins, so if you have trouble with the latter, review the former.
+        \item Primarily amino acids this lecture; peptides, proteins, and higher-order structures next lecture.
+        \item Hopefully, these first six lectures will be foundational for the week 5-7 lectures on organelles and cell biology.
+    \end{itemize}
+    \item A chemical look at proteins.
+    \begin{itemize}
+        \item Made of proteinogenic amino acids (natural L-amino acids save glycine).
+        \item Can be post-translationally modified.
+        \item Post-translational rearrangement (lecture on this later).
+        \item We will look at amino acid properties.
+        \item Next lecture: Determinants of protein structure and\dots
+        \item Secondary and higher order structures.
+    \end{itemize}
+    \item \textbf{Protein}: A polymer composed of amino acids.
+    \begin{itemize}
+        \item Grows from the N-terminus to the C-terminus.
+    \end{itemize}
+    \item Chirality is key.
+    \begin{itemize}
+        \item Except for the achiral glycine, (almost) every amino acid is in its L-form.
+        \begin{itemize}
+            \item Amino acids in their D-form are used as monomers, not for protein synthesis.
+        \end{itemize}
+        \item Steve Kent synthesized the D-form of HIV protease; he's a giant in the field. Taught here.
+        \begin{itemize}
+            \item His big contribution is the development of \textbf{native chemical ligation}, while he was at Scripps.
+            \item We will talk about this more when we cover bioorthogonal chemistry.
+        \end{itemize}
+        \item No ribosomal D-protein synthesis because we would need an entire mirror image biological system.
+        \begin{itemize}
+            \item People are trying to build a mirror ribosome, which Tang thinks is crazy, but they are making progress.
+        \end{itemize}
+        \item Total protein synthesis hasn't gone beyond 300 amino acids.
+        \begin{itemize}
+            \item Solid state protein synthesis: Add one amino acid at a time. Highly efficient. $99.5\%$ efficiency is great, but we have an exponential decrease of yield. Thus, we can't synthesize more than 50-100 amino acid peptides at a time.
+            \item Strategy: Fragments of 50 amino acids ligated together with natural chemical ligation.
+            \item But since proteins are folded as they're built in real life, we natural chemical ligation doesn't necessarily result in an accurately folded protein.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Native chemical ligation}: Connecting two peptides with an amide bond.
+    \begin{itemize}
+        \item A very hard chemical problem; requires activating the amine of an amino acid.
+    \end{itemize}
+    \item Taking advantage of D-proteins.
+    \begin{itemize}
+        \item Why we want to do this: To challenge nature. Tang thinks this is stupid, though.
+        \item Favorable features of D peptides/proteins.
+        \begin{itemize}
+            \item Similar to L proteins: bind to DNA/RNA/proteins, can catalyze reactions.
+            \item Cannot be degraded by natural protease (much more stable than natural peptides/proteins).
+        \end{itemize}
+        \item Challenges in identifying D peptides/proteins that bind specifically to a natural protein.
+        \begin{itemize}
+            \item Rational design? --- Hard to do with so many variables.
+            \item Screening? --- Synthesize a D peptide library that can be amplified between selection rounds.
+        \end{itemize}
+        \item You can't synthesize a D library to look for hits on an L target (too hard; no mirror ribosomes). So instead, synthesize an L library, look for a hit on a D target, and then synthesize the D version of your L hit, which (flipping both chiralities) will react with your L target.
+        \begin{itemize}
+            \item A brilliant idea but didn't turn out that well, though.
+        \end{itemize}
+        \item D-proteins aren't as big as they might be because there are many ways proteins can be degraded \emph{in vivo} (not just natural proteases).
+    \end{itemize}
+    \item Protein basics.
+    \begin{itemize}
+        \item Classification of amino acids is somewhat arbitrary, but they are loosely categorized into hydrophobic, charged, polar, and glycine (in a class by itself since it's achiral).
+        \begin{itemize}
+            \item For example, tryptophan could conceivably be hydrophobic or polar.
+            \item Histidine can frequently be charged.
+            \item Knowing properties is more important than knowing classes.
+        \end{itemize}
+        \item Knowing the amino acids is essential for predicting things like how amino acids interact with each other, what their role is in a reaction, how they catalyze a reaction, etc.
+        \item Memorize amino acids!
+        \begin{itemize}
+            \item The 3-letter and 1-letter shorthand is often (but not always) the first 3 (resp. 1) letter(s) of the name.
+        \end{itemize}
+    \end{itemize}
+    \item Achiral amino acid.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](-[:70]H)(-[:110]H)-[:-30]COOH}
+            \caption{Glycine.}
+            \label{fig:AAachiralG}
+        \end{subfigure}
+        \caption{Achiral amino acid.}
+        \label{fig:AAachiral}
+    \end{figure}
+    \begin{itemize}
+        \item Glycine.
+        \begin{itemize}
+            \item Flexible since it's unsubstituted on its $\alpha$-carbon; can sample multiple conformations.
+            \item Whenever you have a glycine in your protein, you can assume the protein is flexible in that region.
+            \item If you want to fuse two proteins together but you're worried about sterics, you typically use a GGS (glycine, glycine, serine) linker.
+            \item Name: Glycine, Gly, G.
+        \end{itemize}
+    \end{itemize}
+    \item Hydrophobic amino acids.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.16\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2])-[:-30]COOH}
+            \caption{Alanine.}
+            \label{fig:AAachiralA}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.16\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2](-[::60])(-[::-60]))-[:-30]COOH}
+            \caption{Valine.}
+            \label{fig:AAachiralV}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.16\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[::-60](-[::60])(-[::-60]))-[:-30]COOH}
+            \caption{Leucine.}
+            \label{fig:AAachiralL}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.16\linewidth}
+            \centering
+            \chemfig{H_2N>[:30](-[2](<[::60])(-[::-60]-[::60]))-[:-30]COOH}
+            \caption{Isoleucine.}
+            \label{fig:AAachiralI}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.16\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[::-60]-[::60]S-[::60])-[:-30]COOH}
+            \caption{Methionine.}
+            \label{fig:AAachiralM}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.16\linewidth}
+            \centering
+            \chemfig{[:-24]*5(-[,,,2]HN-(-COOH)<--)}
+            \caption{Proline.}
+            \label{fig:AAachiralP}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{0.25\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2](-[:150,,,,white]-[:-150,,,,white]-[:150,,,,white])-[:30]*6(=-=-=-))-[:-30]COOH}
+            \caption{Phenylalanine.}
+            \label{fig:AAachiralF}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2](-[:150,,,,white]-[:-150,,,,white]-[:150,,,,white]-[:150,,,,white]\phantom{HO})-[:30]*6(=-=(-OH)-=-))-[:-30]COOH}
+            \caption{Tyrosine.}
+            \label{fig:AAachiralT}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.25\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2](-[:135,,,,white]-[:162,,,,white]-[:-150,,,,white]-[:150,,,,white])-[:45]*5([::27]-*6(-=-=-=)-[,,,,opacity=0]-\chemabove{N}{H}-=))-[:-30]COOH}
+            \caption{Tryptophan.}
+            \label{fig:AAachiralW}
+        \end{subfigure}
+        \caption{Hydrophobic amino acids.}
+        \label{fig:AAhydrophobic}
+    \end{figure}
+    \begin{itemize}
+        \item We start with the \emph{aliphatic} hydrophobic amino acids.
+        \item Alanine.
+        \begin{itemize}
+            \item Simplest chiral amino acid. That's what makes it important. No other important features.
+            \item If you think an amino acid is important, mutate it to alanine. If the protein is nonfunctional, then you know that it was important. You use alanine over glycine because it's less flexible.
+            \item Name: Alanine, Ala, A.
+        \end{itemize}
+        \item Valine.
+        \begin{itemize}
+            \item The simplest branched amino acid.
+            \item Name: Valine, Val, V.
+        \end{itemize}
+        \item Leucine.
+        \begin{itemize}
+            \item Name: Leucine, Leu, L.
+        \end{itemize}
+        \item Isoleucine.
+        \begin{itemize}
+            \item The second chiral center is not required (it is S though).
+            \item Name: Isoleucine, Ile, I.
+        \end{itemize}
+        \item Note on valine, leucine, and isoleucine:
+        \begin{itemize}
+            \item All are considered bulky, aliphatic amino acids.
+            \item Example (possible test question): Suppose you have an enzyme that fits ATP perfectly. If you want the active site to kick ATP out, you can mutate some of the amino acids to these three to make the pocket smaller.
+            \item Takeaway: Used to change the size of pockets.
+            \item Phenylalanine is another possibility, but it comes with other features as an aromatic system.
+        \end{itemize}
+        \item Methionine.
+        \begin{itemize}
+            \item One of the two amino acids containing sulfur; the other one (cysteine) forms disulfide bridges.
+            \item Frequently seen as a start codon (ATG), though it can appear in the middle of proteins, too.
+            \begin{itemize}
+                \item Their are only two proteins that are encoded by a single codon; the other is tryptophan.
+            \end{itemize}
+            \item When we see a methyl modification, that methyl group is coming from a methionine derivative (specifically \textbf{SAM}).
+            \item Name: Methionine, Met, M.
+        \end{itemize}
+        \item Proline.
+        \begin{itemize}
+            \item Proline has a strained structure.
+            \item Whenever you have proline, the chain naturally has less flexibility.
+            \item You can only have two conformations: \emph{cis}- and \emph{trans}-proline (with respect to the nitrogen). \emph{trans} is more common.
+            \item Proline is not in $\alpha$-helices or $\beta$-pleated sheets because it typically induces a turn.
+            \item Name: Proline, Pro, P.
+        \end{itemize}
+        \item We now move on to \emph{aromatic} hydrophobic amino acids.
+        \item Phenylalanine.
+        \begin{itemize}
+            \item Name: Phenylalanine, Phe, F.
+        \end{itemize}
+        \item Tyrosine.
+        \begin{itemize}
+            \item Some people categorize tyrosine as polar.
+            \item The hydroxyl group is often phosphorylated; this derivative is called a \textbf{tyrosine kinase}.
+            \item Tyrosine kinases have been the most successful cancer drug target: You can somehow develop things that fit into the active site of one tyrosine kinase without affecting the rest of them.
+            \item Tyrosine kinases are less diverse then serine kinases and threonine kinases, aiding selectivity.
+            \item Name: Tyrosine, Tyr, Y.
+        \end{itemize}
+        \item Tryptophan.
+        \begin{itemize}
+            \item Contains an indol moiety.
+            \item Only has one codon corresponding to it.
+            \item The heaviest amino acid.
+            \item The biosynthesis of tryptophan tends to be important, but we will not discuss it in this class. Proceeds through chromic acid.
+            \item Name: Tryptophan, Trp, W.
+        \end{itemize}
+    \end{itemize}
+    \item (S)-adenosylmethionine (SAM) is a very important cofactor in our bodies.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{COOH-[2](-[::60]H_2N)<[:30]-[:-30]-[:30]\charge{-90:3pt=$\oplus$}{S}(-[2])-[:-30]-[:15]*5([:-18]-(-HO)-(-OH)-(-\phantom{A}-[,0.14,,,white]@{A}A)-O-)}
+        \chemmove{
+            \draw (A) circle (2mm);
+        }
+        \caption{(S)-adenosylmethionine.}
+        \label{fig:SAM}
+    \end{figure}
+    \begin{itemize}
+        \item It donates the methyl group in DNA, RNA, and protein modification.
+        \item When the constituent moieties combine, S takes on a positive charge. This makes the lone methyl group on the sulfur a particularly good donor.
+    \end{itemize}
+    \item Charged amino acids.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]CO\charge{45:2pt=$\ominus$}{O})-[:-30]COOH}
+            \caption{Aspartate.}
+            \label{fig:AAchargedD}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]-[2]CO\charge{45:2pt=$\ominus$}{O})-[:-30]COOH}
+            \caption{Aspartate.}
+            \label{fig:AAchargedE}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]-[2]-[:150]-[2]\charge{135:2pt=$\oplus$}{N}H_2)-[:-30]COOH}
+            \caption{Lysine.}
+            \label{fig:AAchargedK}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]-[2]-[:150]HN-[2,,2](=[:150]H_2\charge{45:2pt=$\oplus$}{N})-[:30]NH_2)-[:-30]COOH}
+            \caption{Arginine.}
+            \label{fig:AAchargedR}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]*5([::6]-\chembelow{N}{H}-=N-=))-[:-30]COOH}
+            \caption{Histidine.}
+            \label{fig:AAchargedH}
+        \end{subfigure}
+        \caption{Charged amino acids.}
+        \label{fig:AAcharged}
+    \end{figure}
+    \begin{itemize}
+        \item We start with the \emph{negatively} charged ones.
+        \item Aspartate.
+        \begin{itemize}
+            \item Under physiological $\pH$, we draw the top "COOH" deprotonated; the other will be reacted.
+            \item Name: Aspartate (aspartic acid, if protonated), Asp, D. Alanine plus a carboxylic acid.
+        \end{itemize}
+        \item Glutamate.
+        \begin{itemize}
+            \item Name: Glutamate (glutamic acid, if protonated), Glu, E.
+        \end{itemize}
+        \item We now move onto the \emph{positively} charged ones.
+        \item Lysine.
+        \begin{itemize}
+            \item An amine with $\pKa\approx\numrange{9}{10}$.
+            \item Name: Lysine, Lys, K.
+        \end{itemize}
+        \item Arginine.
+        \begin{itemize}
+            \item Positively charged, but even more so under physiological $\pH$. $\pKa\approx 12$.
+            \item Name: Arginine, Arg, R.
+        \end{itemize}
+        \item Histadine is somewhat unique.
+        \item Histidine.
+        \begin{itemize}
+            \item Sometimes recognized as polar, but Tang prefers charged because it so frequently serves as the general base and acid in enzyme catalysis.
+            \item Contains an imidazole moiety.
+            \item The top nitrogen has $\pKa\approx 6$, so it can easily be protonated or deprotonated at physiological $\pH$. Thus, it functions as a good \textbf{proton shuffle} to help catalyze acid/base reactions.
+            \item Some acid/base reactions can be catalyzed by lysine or aspartic acid.
+            \begin{itemize}
+                \item For the nucleic acid polymerization reaction, the side chain is made of aspartic acid, which coordinates a metal ion to promote the reaction.
+            \end{itemize}
+            \item The other nitrogen does not easily lose its hydrogen.
+            \item Name: Histidine, His, H.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Proton shuffle}: A group that receives a proton from one group and donates it to another.
+    \item Polar, uncharged amino acids.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]OH)-[:-30]COOH}
+            \caption{Serine.}
+            \label{fig:AApolarS}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N>[:30](-[2](<[:150])-[:30]OH)-[:-30]COOH}
+            \caption{Threonine.}
+            \label{fig:AApolarT}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]SH)-[:-30]COOH}
+            \caption{Cysteine.}
+            \label{fig:AApolarC}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30](=[::60]O)(-[::-60]NH_2))-[:-30]COOH}
+            \caption{Asparagine.}
+            \label{fig:AApolarN}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.19\linewidth}
+            \centering
+            \chemfig{H_2N-[:30](<[2]-[:30]-[2](=[::60]O)(-[::-60]NH_2))-[:-30]COOH}
+            \caption{Glutamine.}
+            \label{fig:AApolarQ}
+        \end{subfigure}
+        \caption{Polar amino acids.}
+        \label{fig:AApolar}
+    \end{figure}
+    \begin{itemize}
+        \item Serine.
+        \begin{itemize}
+            \item Can be phosphorylated.
+            \item The hydroxyl group frequently serves as a nucleophile in the active site of enzymes.
+            \begin{itemize}
+                \item Example (next time): \textbf{Serine protease}.
+            \end{itemize}
+            \item Name: Serine, Ser, S.
+        \end{itemize}
+        \item Threonine.
+        \begin{itemize}
+            \item Chirality: Same drawing style as isoleucine; R, though. Again, this chirality is not required.
+            \item Name: Threonine, Thr, T.
+        \end{itemize}
+        \item Cysteine.
+        \begin{itemize}
+            \item Very similar to serine.
+            \item Forms disulfide bonds to bring distal ends or subunits of a protein together.
+            \item Name: Cysteine, Cys, C.
+        \end{itemize}
+        \item Asparagine.
+        \begin{itemize}
+            \item Related to aspartate; we just change the carboxylic acid to an amide.
+            \item Frequently found as a metal coordinate.
+            \item Can also form H-bonds with other amino acids.
+            \item Name: Asparagine, Asn, N.
+        \end{itemize}
+        \item Glutamine.
+        \begin{itemize}
+            \item Related to glutamate; we just change the carboxylic acid to an amide.
+            \item Same metal-coordinating and H-bonding properties as asparagine.
+            \item Name: Glutamine, Gln, Q.
+        \end{itemize}
+    \end{itemize}
+    \item A colleague asked Tang what AA he should substitute for alanine to prove that it's absolutely conserved.
+    \begin{itemize}
+        \item She suggested fellow small amino acids (valine or leucine) as well as achiral glycine to determine if either size or chirality is important in that position.
+        \item Overall, this is a very hard to answer question.
+        \item You often find that alanine is needed because it doesn't disrupt anything; it's an inert filler and doesn't play a role. Other things will typically play a role.
+    \end{itemize}
+    \item Amino acids: Hydrophobic side chains, acidic side chains, basic side chains, and special residues.
+    \begin{itemize}
+        \item On the acidic side-chain amino acids: Sometimes the active site can be so well organized that replacing an D with an E will disrupt it.
+        \item In addition to cysteine, we sometimes have selenocysteine (it does occur in our bodies, but it's not considered one of the 20 natural amino acis).
+        \begin{itemize}
+            \item Has selenium instead of sulfur.
+            \item Name: Selenocysteine, Sec, U.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}
