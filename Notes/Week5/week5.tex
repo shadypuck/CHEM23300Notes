@@ -215,5 +215,407 @@
 
 
 
+\section{Cell Biology for Chemists}
+\begin{itemize}
+    \item \marginnote{10/27:}Yamuna starts by telling us that we should feel free to sleep through class and watch the recording if we want since it's so early.
+    \item Today: Third-generation sequencing (left over from last class) and then the cell.
+    \item So far: Biomolecules, structure, and function. Third generation sequencing will show you how we can assemble all of these components together to get them to do very complex work in union in a very purified way.
+    \begin{itemize}
+        \item After that, we will focus on how they all function together in the cell.
+    \end{itemize}
+    \item Yamuna used to think that the cytoplasm was mostly water with a few stray biomolecules, but in reality, there are tons of biomolecules all crammed together into a highly viscous "hot pot" that these components have to navigate through.
+    \begin{itemize}
+        \item Another factor is quick recognition and selectivity; since biomolecules bump into so many things so quickly, they have to be able to tell what they \emph{don't} want to interact with very quickly after collision.
+    \end{itemize}
+    \item Illumina qualifies as second-generation sequencing.
+    \begin{itemize}
+        \item It is still limited to 200-300 base pairs at a time. You can't do an entire run at once. Thus, if you want to sequence repeat regions (such as at the end of telomeres), you can't tell how many repeats you have using such methods.
+        \begin{itemize}
+            \item This repeat problems is one of the reasons they declared the Human Genome Project concluded but "90\% finished."
+            \item After solving the repeats issue, then they declared that the work was done.
+            \item Another reason was that they wanted to make their data public so Craig Venter didn't copyright it and freeze science.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{SMRT sequencing}: A method of sequencing in which DNA polymerase is immobilized over a camera that records each fluorophore flash as nucleotides are added. \emph{Also known as} \textbf{single-molecule real-time sequencing}, \textbf{PacBio sequencing}.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\linewidth]{../ExtFiles/sequencingSMRT.png}
+        \caption{SMRT sequencing setup.}
+        \label{fig:sequencingSMRT}
+    \end{figure}
+    \begin{itemize}
+        \item A type of third-generation sequencing.
+        \item Called real-time because a DNA polymerase is immobilized on a surface; dNTPs carrying fluorophores float in the mix; and as each dNTP is added to the strand by the DNA polymerase, you observe it fluorescing red, green, yellow, or blue exactly when it is added. A camera counts the sequence of colors.
+        \item But how do you selectively get the fluorescence of just the base that is added? You fix the DNA polymerase above a \textbf{zero-mode waveguide}.
+    \end{itemize}
+    \item \textbf{Zero-mode waveguide}: An ultrasmall pore, smaller than the wavelength of light, over which a biomolecule can be held. \emph{Also known as} \textbf{ZMW}.
+    \begin{itemize}
+        \item In our example, DNA polymerase is held over the pore.
+        \item The gap is so small that light passing through it can only interact with the DNA polymerase fixed directly above it and cannot travel further up into the rest of the matrix.
+        \item In effect, a ZMW is a "short-sighted fluorescence microscope."
+    \end{itemize}
+    \item More on the ZMW.
+    \begin{itemize}
+        \item One of the smallest possible detection volumes.
+        \item Developed by Watt W. Webb.
+        \item Because the light that comes in has very small wavelength, it cannot travel upwards. You have the greatest intensity right where the light comes in, and then the intensity really falls off; thus, other dNTPs cannot be irradiated.
+        \item Notice that all fluorophores are attached at the $3'$ (??) $\gamma$ phosphate, so when a dNTP is added, the pyrophosphate plus fluorophore is sliced out, resulting in a flash of light.
+        \item The process occurs in parallel in thousands (now millions) of ZMWs per SMRT cell.
+    \end{itemize}
+    \item Difference from illumina sequencing: Illumina is not real time.
+    \begin{itemize}
+        \item DNA polymerase goes so fast naturally (too fast for any camera) that you have to slow it down.
+        \item You slow it down by attaching a protecting group to all dNTP's $3'$ phosphates. This group must be removed by a deprotection before the next base can be added.
+    \end{itemize}
+    \item \textbf{Nanopore sequencing}: An electrical sequencing method currently in development.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\linewidth]{../ExtFiles/sequencingNanopore.png}
+        \caption{Nanopore sequencing setup.}
+        \label{fig:sequencingNanopore}
+    \end{figure}
+    \begin{itemize}
+        \item A company has proposed that sequencing can be done on-site using a device the size of a USB drive.
+        \item This method of sequencing is electrical, not chemical like all of the others.
+        \item The pore (a \textbf{porin}) is of bacterial origin.
+        \item Helicase sits at the top, unwinding incident DNA so that one single strand fits through the pore and the other doesn't.
+        \item Each base passing through the pore blocks it to a different and unique extent, changing the ion flow through the pore, facilitating sequencing by current.
+        \item This method also facilitates sequencing of modified nucleobases (e.g., methylated cytosine or adenine) because they will provide a unique current, too.
+    \end{itemize}
+    \item Note on the quiz.
+    \begin{itemize}
+        \item We will need to learn about \textbf{ChIP-Seq}.
+    \end{itemize}
+    \item \textbf{ChIP-Seq}: A technique that identifies which proteins sit where on the genome. \emph{Also known as} \textbf{chromatin immunoprecipitation and sequencing}.
+    \begin{itemize}
+        \item Enables us to, for example, find out where in the genome a particular transcription factor sits.
+        \item ChIP-Seq accomplishes this by \textbf{immunoprecipitating} the transcription factor.
+        \item Immunoprecipitation \textbf{cross-links} the transcription factor to the DNA.
+        \item You sonicate the DNA to break it into different bits and then pull down specifically your protein and DNA sequence. Thus, all instances of your protein come down along with all DNA to which it was bound at the time of cross-linking.
+        \item Lastly, you sequence the immunoprecipitated DNA and compare it to reference DNA to locate it within the genome.
+    \end{itemize}
+    \item \textbf{Immunoprecipitation}: Making a biomolecule more heavy so that it can be precipitated out of solution by attaching an antibody to it.
+    \begin{itemize}
+        \item Achieved by introducing a targeted antibody into the system.
+    \end{itemize}
+    \item \textbf{Cross-linking} (DNA): The process of covalently binding cellular proteins to DNA.
+    \begin{itemize}
+        \item This typically occurs upon exposure to various \textbf{endogenous}, environmental, and chemotherapeutic agents.
+    \end{itemize}
+    \item \textbf{Endogenous} (biomolecule): A biomolecule that grows or originates from within an organism.
+    \item A good book to study this content is \emph{Molecular Biology of the Cell} by Bruce Alberts.
+    \item Aside: Yamuna's perspective on pharma and biotech companies --- there are three kinds of people in chemical biology.
+    \begin{enumerate}
+        \item \textbf{Assassins} are asked to develop a molecule that selectively binds a specific family of biomolecules, and they use all of the tools of chemistry and biology to do so.
+        \item \textbf{Recruiters} are asked to find the best way to inhibit a certain type of protein.
+        \item \textbf{Deciders} decide what pathway should be targeted.
+    \end{enumerate}
+    \item Deciders are fairly small in number and consult for a variety of companies because they have the vision to know what to do.
+    \item We now conclude sequencing and move onto studying the cell.
+    \item What makes a city alive?
+    \begin{itemize}
+        \item Class-suggested answers: Memory, people, energy, and interaction networks.
+        \item We should see a cell the way we see a city.
+    \end{itemize}
+    \item Aspects of a city.
+    \begin{itemize}
+        \item Transportation, currency flow, executive function, import and export, infrastructure, schools, energy, defense systems, cleaners, the postal system, hospitals, and people/parts.
+    \end{itemize}
+    \item Analogies within a cell.
+    \begin{itemize}
+        \item Postal system: Golgi.
+        \item Energy: Mitochondria.
+        \item Garbage disposal: Lysosomes.
+        \item Defense systems and repair: DNA repair mechanisms.
+        \item Border: Cell membrane.
+        \item Transport system: Microtubules and the cytoskeleton.
+        \begin{itemize}
+            \item Allow you to go from the membrane to deep within the cell.
+            \item Proteins don't migrate by random diffusion but catch hold of an actin network and move.
+        \end{itemize}
+        \item Factories: Ribosomes are protein production factories.
+    \end{itemize}
+    \item MicroRNAs largely regulate various networks and exist for robustness.
+    \item The cell is alive because all of these parts have to interact with each other. All of their functions are highly interlinked.
+    \item Look up the difference between plant and animal cells! Will be an exam question!!
+    \begin{itemize}
+        \item Plant cells have \textbf{plasmodesmata}, a \textbf{cell wall}, a \textbf{central vacuole}, and \textbf{chloroplasts}.
+        \item Animal cells have \textbf{centrioles}.
+    \end{itemize}
+    \item The plasma membrane: Basics.
+    \begin{itemize}
+        \item The fluid mosaic model. We are taught in school that the plasma membrane is a homogeneous sea of lipids that proteins are mixed into. However, this is \emph{very} wrong.
+        \item The plasma membrane is the first line of defense for the cell against invading pathogens.
+        \item This region is really important.
+        \begin{itemize}
+            \item The first-most drugged class of molecules is \textbf{G-protein coupled receptors}.
+            \item The second-most drugged class of molecules is cell-surface ion channels.
+        \end{itemize}
+        \item A phospholipid has a hydrophilic head and a hydrophobic tail.
+        \begin{itemize}
+            \item We may approximate them as cylinders according to ??.
+            \item The hydrophilic heads face outwards, and the hydrophobic tails face inwards.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{G-protein coupled receptor}: A protein that is present on the cell surface. \emph{Also known as} \textbf{GPCR}.
+    \item The plasma membrane: Main constituents.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.98\linewidth]{../ExtFiles/plasmaMembraneConstituents.png}
+        \caption{Plasma membrane constituents.}
+        \label{fig:plasmaMembraneConstituents}
+    \end{figure}
+    \begin{itemize}
+        \item Comprised of 500-2000 different kinds of lipids molecules; it is not homogeneous.
+        \item The variations come from different alkyl chain lengths and degrees of unsaturation. You can also have different head groups: The most common are phosphatidylethanolamine, phosphatidylserine (PS), phosphatidylcholine, and sphingomyelin.
+        \item You also have 17-23\% cholesterol in the membrane to provide thermal stability; more than that makes the membrane too stiff, less than that makes the membrane too wobbly.
+        \item Cholesterol sits in the membrane wherever the unsaturations are. Unsaturations cause bends which allow cholesterol to slide in and stabilize the system.
+    \end{itemize}
+    \item The plasma membrane is asymmetric.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.4\linewidth]{../ExtFiles/plasmaMembraneAsyma.png}
+            \caption{Phospholipid variations.}
+            \label{fig:plasmaMembraneAsyma}
+        \end{subfigure}
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.7\linewidth]{../ExtFiles/plasmaMembraneAsymb.png}
+            \caption{Membranous protein types.}
+            \label{fig:plasmaMembraneAsymb}
+        \end{subfigure}
+        \caption{Asymmetry in the plasma membrane.}
+        \label{fig:plasmaMembraneAsym}
+    \end{figure}
+    \begin{itemize}
+        \item The outer and inner leaflets look quite different.
+        \begin{itemize}
+            \item Note that the four colors of phospholipids in Figure \ref{fig:plasmaMembraneAsyma} (red, brown, yellow, and green) correspond to the four head groups in Figure \ref{fig:plasmaMembraneConstituents}.
+            \item The inner membrane has a lot of PS.
+            \item The outer membrane has a lot of \textbf{glycolipids}.
+        \end{itemize}
+        \item If one head group has two tails, it looks like a cylinder. If one head group has multiple hydrophobic tails, it looks more like a cone. If one head group has a couple of tails and a large glycolipid, it will look like an inverted cone.
+        \begin{itemize}
+            \item This affects packing in the plasma membrane; larger hydrophilic groups need more space and cause the plasma membrane to pucker outwards; larger hydrophobic groups cause it to bend inwards.
+        \end{itemize}
+        \item We know a cell has died in the lab via annexin staining.
+        \begin{itemize}
+            \item When a cell is alive, it is constantly flipping PS molecules that have migrated to the outer leaflet back to the inner leaflet. When it dies, it can no longer do this, and PS molecules flip to the outer leaflet in large numbers.
+            \item Annexins bind PS molecules, signaling to all immune cells that this one has died and they should come eat it.
+        \end{itemize}
+        \item Another place from which asymmetry comes is membranous proteins.
+        \item Transmembrane proteins.
+        \begin{itemize}
+            \item Proteins can have transmembrane regions (usually $\alpha$-helical and hydrophobic).
+            \item Some transmembrane proteins are \textbf{single-pass} while others are \textbf{multipass}.
+            \item Once a transmembrane protein is synthesized, it folds, condensing and squeezing phospholipids that are in the way out of its volume.
+        \end{itemize}
+        \item Attaching a protein to the inner leaflet.
+        \begin{itemize}
+            \item Use an \textbf{amphipathic} helix.
+            \item Proteins can also be \textbf{lipid anchored} to the membrane.
+        \end{itemize}
+        \item Protein-protein interactions with a single-pass transmembrane protein can attach proteins to the the inner or outer leaflet.
+        \item Attaching a protein to the outer leaflet.
+        \begin{itemize}
+            \item Use a \textbf{GPI anchor}.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Glycolipid}: A huge number of sugars attached together to form a hydrophilic head group on the outside of the plasma membrane.
+    \item \textbf{Single-pass} (transmembrane protein): A transmembrane protein that passes through the membrane once.
+    \item \textbf{Multipass} (transmembrane protein): A transmembrane protein that passes through the membrane more than once, with the different transmembrane regions connected by various AA chain linkers.
+    \item \textbf{Amphipathic} (helix): An $\alpha$-helix for which one side is hydrophilic and the other is hydrophobic.
+    \begin{itemize}
+        \item These are rare.
+        \item They insert into the surface of the plasma membrane, with the hydrophilic region oriented toward the cytoplasm and the hydrophobic region oriented toward the hydrophobic interior of the plasma membrane.
+    \end{itemize}
+    \item \textbf{Lipid anchor}: A fatty acid lipid chain covalently bound to a protein and inserted into a cell's plasma membrane.
+    \begin{itemize}
+        \item Some proteins show out a serine, cysteine, or lysine. These are capable of being alkylated (via an ester, thioester, or amide linkage, respectively). The alkyl chain can then bind to a fatty acid lipid chain, which embeds itself in the similarly hydrophobic region of the plasma membrane.
+        \item Single lipid anchors usually aren't very stable; in order to achieve stable integration, you typically need one more chain.
+    \end{itemize}
+    \item \textbf{GPI anchor}. \emph{Also known as} \textbf{Glycosylphosphatidylinositol anchor}, \textbf{GPI linker}.
+    \begin{itemize}
+        \item Very important.
+        \item A protein attaches (via a GPI linker) to a lipid; we'll talk about these in greater depth later.
+    \end{itemize}
+    \item Different kinds of lipid anchors.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../ExtFiles/lipidAnchorTypes.png}
+        \caption{Lipid anchor types.}
+        \label{fig:lipidAnchorTypes}
+    \end{figure}
+    \item Most transmembrane proteins cross the bilayer in an $\alpha$-helical conformation.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\linewidth]{../ExtFiles/hydropathyChart.png}
+        \caption{Hydropathy chart example.}
+        \label{fig:hydropathyChart}
+    \end{figure}
+    \begin{itemize}
+        \item Transmembrane domains are predicted using the \textbf{hydropathy index}.
+        \item You use a sliding window of 20 AAs. This means that you average the hydropathy indices of 20 adjacent amino acids at a time in a protein to determine what 20-AA region has the highest overall hydropathy index. This region is the one that's most likely to be transmembrane.
+        \item From a plot of the sliding window hydrophobicity vs. AA number, you can look for peaks in hydrophobicity. These correspond to hydrophobic, transmembrane regions.
+        \begin{itemize}
+            \item There will be a question about this in the exam!
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Hydropathy index}: The amount of Gibbs free energy needed to transfer an amino acid residue from water to a nonpolar solvent.
+    \begin{itemize}
+        \item A positive value means that the AA is hydrophobic; vice versa if the value is negative.
+    \end{itemize}
+    \item Most transmembrane proteins cross the bilayer in an $\alpha$-helical conformation.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.4\linewidth]{../ExtFiles/multipassFolding.png}
+        \caption{Multipass transmembrane protein folding.}
+        \label{fig:multipassFolding}
+    \end{figure}
+    \begin{itemize}
+        \item As a protein is produced (more on production in the ER and transport to the cell surface later), the transmembrane domains insert into the plasma membrane and squeeze out intermediate phospholipids.
+    \end{itemize}
+    \item Proteins are embedded in different ways.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.4\linewidth]{../ExtFiles/alternateProteinEmbeddinga.png}
+            \caption{$\beta$-barrel proteins.}
+            \label{fig:alternateProteinEmbeddinga}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.7\linewidth]{../ExtFiles/alternateProteinEmbeddingb.png}
+            \caption{Extracellular protein binding and resultant plasma membrane bending.}
+            \label{fig:alternateProteinEmbeddingb}
+        \end{subfigure}
+        \caption{Alternate transmembrane protein embedding.}
+        \label{fig:alternateProteinEmbedding}
+    \end{figure}
+    \begin{itemize}
+        \item It is possible to embed without $\alpha$-helices. Indeed, we can use $\beta$-sheets composed of hydrophobic residues.
+        \begin{itemize}
+            \item Cytosolic proteins of this form tuck all of their hydrophobic side chains inside.
+            \item Transmembrane proteins of this form show all of their hydrophobic side chains outside.
+        \end{itemize}
+        \item Example: The MSPA porin from nanopore sequencing.
+        \item These are called \textbf{$\bm{\beta}$-barrel proteins} and are often involved in transport or are receptors.
+        \item Barrel size varies.
+        \begin{itemize}
+            \item MSPA has a huge barrel.
+            \item Smaller barrels are often filled up by amino acids on the inside but can act as a scaffold to interact with proteins on the top or bottom. Moreover, selected small molecules can sometimes pass through.
+        \end{itemize}
+        \item These channels are very large in general and can bend membranes by binding proteins on the outer leaflet.
+        \begin{itemize}
+            \item These can act as large head groups and induce outward puckering.
+            \item A conformational change in the protein induced upon binding can place mechanical pressure on the membrane.
+            \item A protein can bind to multiple head groups and push them apart.
+        \end{itemize}
+    \end{itemize}
+    \item The inside vs. the outside of the cell.
+    \begin{itemize}
+        \item 33\% of our ATP goes to maintaining ion gradients.
+        \item Remember that some molecules are rich outside and poor inside, and vice versa.
+        \item For example, cells need to take in glucose and enrich its concentration within the cell.
+    \end{itemize}
+    \item We now look at the transport processes that maintain these gradients.
+    \item There are two main classes of membrane transport proteins.
+    \begin{figure}[h!]
+        \centering
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/transportTypesa.png}
+            \caption{Types of transport.}
+            \label{fig:transportTypesa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/transportTypesb.png}
+            \caption{Phases of transporter-mediated passive transport.}
+            \label{fig:transportTypesb}
+        \end{subfigure}
+        \caption{Membrane transport options.}
+        \label{fig:transportTypes}
+    \end{figure}
+    \begin{itemize}
+        \item \textbf{Passive transport} vs. \textbf{active transport}.
+        \item Types of passive transport: There is some simple diffusion/leakage, channel-mediated diffusion such as ion channels allow very fast diffusion, and transporter-mediated diffusion to move larger molecules.
+        \item Transporters usually catch molecules on one side of the membrane, inducing a conformational change, and release them on the other side of the membrane. Outward-open, occluded, and inward-open states.
+    \end{itemize}
+    \item \textbf{Passive transport}: A type of membrane transport that \emph{does not} require energy to move substances across cell membranes.
+    \item \textbf{Active transport}: A type of membrane transport that \emph{does} require energy to move substances across cell membranes.
+    \item How a cell regulates concentration gradients.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.33\linewidth]{../ExtFiles/concentrationGradientRegulation.png}
+        \caption{Concentration gradient regulation.}
+        \label{fig:concentrationGradientRegulation}
+    \end{figure}
+    \begin{itemize}
+        \item As per the Michaelis-Menten mechanism, transporter-mediated diffusion starts out strong but eventually levels out at some $v_\text{max}$ as the concentration of the transported molecule increases.
+        \item Simple diffusion and channel-mediated transport, however, increase linearly with the concentration of transported molecule indefinitely.
+        \item Thus, equilibrium is established when the rate of transporter-mediated diffusion in one direction equals the rate of simple diffusion and channel-mediated transport in the other direction (the intersection of the two lines on the right of Figure \ref{fig:concentrationGradientRegulation}).
+    \end{itemize}
+    \item Types of transporters.
+    \begin{itemize}
+        \item Most transporters are \textbf{coupled transporters}.
+        \item Another kind is \textbf{ATP-driven pumps}.
+        \item Energy can also come from light, as in \textbf{light-driven pumps}.
+    \end{itemize}
+    \item \textbf{Coupled transporter}: A transporter that moves two molecules either in the same or opposite directions. \emph{Also known as} \textbf{cotransporter}.
+    \begin{itemize}
+        \item \textbf{Symporters} and \textbf{antiporters} are the two types of coupled transporters.
+    \end{itemize}
+    \item \textbf{ATP-driven pump}: The ATPase domain hydrolyzes ATP, providing energy to power a conformational change that allows binding and then transport from low concentration to high concentration.
+    \item \textbf{Light-driven pump}: The energy for the conformational change comes from light instead of ATP.
+    \item \textbf{Uniporter}: A transporter that only moves a single kind of entity.
+    \item \textbf{Symporter}: A transporter that moves two different entities in the same direction.
+    \begin{itemize}
+        \item Example: Transporting glucose using sodium. You need sodium as a co-transported ion to transport glucose.
+    \end{itemize}
+    \item \textbf{Antiporter}: A transporter that alternates between taking one molecule into the cell and another out.
+    \item An example of coupled transport: The sodium-coupled glucose transporter's steps.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.7\linewidth]{../ExtFiles/NaGlucoseTransp.png}
+        \caption{Sodium-glucose cotransporter activity.}
+        \label{fig:NaGlucoseTransp}
+    \end{figure}
+    \begin{enumerate}
+        \item Occluded-empty.
+        \item Outward-open. Sodium has a high $K_d$, so it binds readily. This induces a conformational change, generating a high-affinity glucose-binding site.
+        \item Occluded-occupied.
+        \item Inward-open. Sodium falls off first. This induces a conformational change, removing the high-affinity glucose-binding site and kicking glucose out.
+        \item Repeat.
+    \end{enumerate}
+    \item Key thing to remember about the plasma membrane: We tend to think of cells like HELA cells and HEK cells that are apolar, but real cells do have poles and specific regions with fundamentally different membranes.
+    \begin{itemize}
+        \item For example, consider intestinal cells (I-cells). One side faces the gut and all of the bacteria therein (we are 98\% bacteria by number of cells), the opposite side faces our vasculature (bloodstream) for easy deposition of nutrients, and the sides are bound to each other with protein velcro to keep the bacteria from getting into our blood (which would cause sepsis).
+    \end{itemize}
+    \item In addition to directly inhibiting proteins, you can simply stop them from going where they need to, e.g., if you want to inactivate a transmembrane protein, simply stopping it from leaving the ER and getting to the plasma membrane will do the job.
+    \item The bending of membranes allows very similar chemical structures to achieve different objectives on a "macro" scale.
+    \begin{itemize}
+        \item Only 2-5\% of total cell membrane is the plasma membrane.
+        \item Mitochondria contain a long, smooth, ellipsoidal outer membrane.
+        \item Mitochondria also contain a long, fenestrated inner membrane.
+        \item The endoplasmic reticulum's membrane has both flat and tubular regions. We don't know how the balance is decided, though.
+    \end{itemize}
+    \item \textbf{Solute liquid carriers} (SLCs) sit on the cell surface and are involved in nutrient transport. Every SLC mutation results in a different disease. These are symporters. These are the next class of druggable molecules.
+    \item What is the purpose of aquaporins?
+    \begin{itemize}
+        \item These control the membrane tension, which is critical.
+        \item Work together with sodium and potassium transporters.
+    \end{itemize}
+    \item Cystic fibrosis isn't concerned with water pressure; it's concerned with chloride concentration.
+    \begin{itemize}
+        \item Yamuna's advice: If you want to lose weight, stop eating salt. Low external salt gradients make it harder to transport amino acids into cells.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
