@@ -374,5 +374,299 @@
 
 
 
+\section{Quiz Prep}
+\emph{From \textcite{bib:QuizReading}.}
+\subsection*{Notes}
+\begin{itemize}
+    \item \marginnote{11/2:}\textbf{Single-stranded DNA}: DNA that is not currently bound and hydrogen bonded into a double helix. \emph{Also known as} \textbf{ssDNA}.
+    \item \textbf{Transcription}: A highly dynamic process that generates ssDNA as transcription bubbles.
+    \item \textbf{Transcription bubble}: A portion of the double helix that has been unwound and separated for the purpose of transcribing one strand of it.
+    \item \textbf{KAS-seq}: Kethoxal-assisted single stranded DNA sequencing, the subject of this paper, provides rapid (within 5 mins), sensitive, and genome-wide capture and mapping of ssDNA produced by transcriptionally active RNA polymerases or other processes in situ using as few as 1000 cells.
+    \item Kethoxal is a small molecule that rapidly and selectively binds with unpaired guanine.
+    \item Attaching an azide group to kethoxal allows it to be tagged with bio-orthogonal click chemistry.
+    \item Applications of KAS-seq.
+    \begin{itemize}
+        \item Definition of a group of single-stranded enhancers that enrich unique sequence motifs.
+        \begin{itemize}
+            \item Specifically, these enhancers are associated with the binding of specific transcription factors and exhibit elevated enhancer-promoter interactions.
+        \end{itemize}
+        \item Discovery: When \textbf{protein condensation} is inhibited, RNA polymerase II (Pol II) rapidly releases from a group of promoters.
+        \item Fast and accurate analysis of transcription dynamics and enhancer activities simultaneously in both low-input and high-throughput modalities.
+    \end{itemize}
+    \item \textbf{Protein condensation}: Proteins sticking together.
+    \item \textbf{Chromatin}: The material of which the chromosomes of organisms are composed, consisting of protein, RNA, and DNA.
+    \item Transcription and its regulation (importance).
+    \begin{itemize}
+        \item Determine physiological function and the cell's fate.
+        \item Regulation issues often lead to disease.
+    \end{itemize}
+    \item \textbf{Global transcription regulation}: Regulation of transcription across the entire genome.
+    \item How do we understand global transcription regulation?
+    \begin{itemize}
+        \item Employ techniques like \textbf{ChIP-seq}.
+        \item Search for the presence and level of \textbf{nascent RNA}.
+        \begin{itemize}
+            \item Based on \textbf{run-on assays}, \textbf{metabolic labeling}, and Pol II-associated or chromatin-associated RNA enrichment.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{ChIP-seq}: A genome-wide sequencing approach that analyzes the occupancy of RNA polymerases.
+    \item \textbf{Nascent RNA}: Newly made RNA, often still tethered to the DNA axis by elongating Pol II and being continuously altered by splicing and other processing events during its synthesis.
+    \item \textbf{Assay}: An experimental method for assessing the presence, localization, or biological activity of a substance in living cells and biological matrices.
+    \item \textbf{Run-on assay}: A method for measuring the frequency of transcription initiation. \emph{Also known as} \textbf{nuclear run-on assay}. \emph{Procedure}
+    \begin{enumerate}
+        \item Take cells. At the time you want to measure the frequency of transcription initiation, freeze them.
+        \item Reheat them and incubate at \SI{37}{\celsius} in the presence of NTPs and radiolabeled UTP.
+        \item Measure the amount of radiation given off by the products.
+        \item The above measurement will be roughly proportional to the number of nascent transcripts on a gene at a certain time, which in turn is thought to be proportional to the frequency of transcription initiation.
+    \end{enumerate}
+    \item \textbf{Metabolic labeling}: The process of using the synthesis and modification machinery of living cells to incorporate detection or affinity tags into biomolecules.
+    \item Limitations of the current methods for understanding global transcription regulation.
+    \begin{itemize}
+        \item Run-on assays and enrichment require millions of cells as starting material.
+        \item Pol II ChIP-seq cannot distinguish whether RNA polymerases are simply bound or are actively engaged in transcription.
+        \item Metabolic labeling cannot measure low-abundance RNA species. Post-transcriptional processing can also alter results.
+    \end{itemize}
+    \item If we want to understand global transcription regulation, then certainly it will be important to determine where transcription occurs.
+    \item Goal: Locate where RNA polymerases engage in transcription.
+    \begin{itemize}
+        \item Observation: RNA polymerases transform dsDNA to ssDNA bubbles as they move.
+        \item Method: Label/tag/identify/characterize ssDNA.
+    \end{itemize}
+    \item Previous attempts: \ce{MnO4-} preferentially oxidizes single-stranded thymidine residues.
+    \begin{itemize}
+        \item Has been used to reveal Pol II-induced promoter melting locally and on a genome-wide basis.
+        \item Works together with S1 nuclease digestion.
+        \item Doesn't work on B DNA.
+        \item Limitations:
+        \begin{itemize}
+            \item Requires tens of millions of cells.
+            \item Shows low sensitivity for weak/broad signals at Pol II elongation sites.
+        \end{itemize}
+    \end{itemize}
+    \item Outline of the paper.
+    \begin{itemize}
+        \item Describe KAS-seq.
+        \item Prove that it simultaneously measures the dynamics of transciptionally engaged Pol II, transcribing enhancers, Pol I and Pol III activities, and non-canonical DNA structures in which ssDNA plays a major role.
+        \item Prove that it works with as few as 1000 cells.
+        \item Prove that KAS-seq detects changes in transcription during quick environmental changes, e.g., inhibition of protein condensation.
+    \end{itemize}
+    \item Note that most conclusions listed here have supporting data and correlation numbers given in the paper.
+    \item Genome-wide profiling of ssDNA using \ce{N3}-kethoxal-based labeling.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/findssDNAa.png}
+            \caption{\ce{N3}-kethoxal binding.}
+            \label{fig:findssDNAa}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{../ExtFiles/findssDNAb.png}
+            \caption{Tagging and sequencing.}
+            \label{fig:findssDNAb}
+        \end{subfigure}
+        \caption{Locating ssDNA within the genome.}
+        \label{fig:findssDNA}
+    \end{figure}
+    \begin{itemize}
+        \item Prior literature: Kethoxal reacts with the N1 and N2 positions of guanines (the ones that form Watson-Crick interactions) in ssDNA and RNAs under physiological conditions.
+        \item This work: Attaching an azide "handle" to kethoxal to make \ce{N3}-kethoxal.
+        \item Properties of \ce{N3}-kethoxal.
+        \begin{itemize}
+            \item Retains high activity and selectivity for guanine.
+            \item Offers a bio-orthogonal handle that can readily be modified with a biotin or other FG.
+        \end{itemize}
+        \item \ce{N3}-kethoxal effectively maps the secondary structure of RNAs by selectively labeling guanines in ssRNAs under mild conditions in live cells.
+        \item Hypothesis based on this result: The scope can be expanded to selectively labeling ssDNA (Figure \ref{fig:findssDNAa}).
+        \item Verification of \ce{N3}-kethoxal's high labeling reactivity.
+        \begin{itemize}
+            \item Run an in vitro labeling assay using a synthetic DNA oligonucleotide with exactly four deoxyguanosine bases.
+            \item \SI{37}{\celsius} and 5 mins incubation labels all deoxyguanosine bases.
+        \end{itemize}
+        \item Optimization of the KAS-seq \ce{N3}-kethoxal introduction conditions.
+        \begin{itemize}
+            \item Reaction occurs with deoxyguanosine within 2 mins.
+            \item Reaction occurs with L-arginine within 10 mins.
+            \item Thus, 5 mins is a good time to both tag deoxyguanosine and minimize protein labeling.
+        \end{itemize}
+        \item After labeling, \textbf{genomic DNA} is isolated and biotinylated through click chemistry.
+        \item Enrich the fragments with \textbf{streptavidin} beads.
+        \item Subject them to \textbf{library construction}.
+        \item Remove \ce{N3}-kethoxal labels with a short heating at \SI{95}{\celsius}.
+        \item Perform a PCR amplification.
+        \item The whole process takes about 1 day.
+    \end{itemize}
+    \item \textbf{Genomic DNA}: Regular DNA inside the nucleus. \emph{Also known as} \textbf{gDNA}.
+    \item \textbf{Streptavidin}: A protein with an extraordinarily strong binding affinity for biotin.
+    \item \textbf{DNA library}: A collection of DNA fragments that have been cloned into vectors.
+    \item \textbf{Library construction}: The act of storing and/or propagating a DNA library in a population of micro-organisms through the process of molecular cloning.
+    \item Control experiments (run on one million live HEK293T cells\footnote{A derivative of a common strain of immortalized human kidney cells.} and mouse embryonic stem cells [mESCs]).
+    \begin{itemize}
+        \item Does \ce{N3}-kethoxal labeling affect gDNA isolation yield and purity? No.
+        \item Do we still observe biotin signals in the absence of either \ce{N3}-kethoxal or the biotinylation reagent (biotin-DBCO)? No.
+    \end{itemize}
+    \item KAS-seq results are highly reproducible in replicate experiments.
+    \item KAS-seq signals mark active transcription.
+    \begin{itemize}
+        \item KAS-seq signals exhibit a similar distribution pattern to Pol II ChIP-seq signals along regions with different G/C contents. Indicates G-specific labeling isn't a major factor.
+        \item KAS-seq reads are very common at gene-coding regions, especially at gene promoters and transcription termination areas.
+        \begin{itemize}
+            \item On the other hand, they are far less common at intergenic regions.
+        \end{itemize}
+        \item KAS-seq signals positively correlate with known histone modifications denoting active transcription, and negatively correlate with inactive chromatin markers.
+        \item KAS-seq also shows improvement over the permanganate method, particularly in the area of weak and broad ssDNA signals.
+    \end{itemize}
+    \item \textbf{Transition start site}. \emph{Also known as} \textbf{TSS}.
+    \item \textbf{Transition end site}. \emph{Also known as} \textbf{TES}.
+    \item KAS-seq works with very small numbers of cells.
+    \begin{itemize}
+        \item "Because of the high guanine labeling reactivity of \ce{N3}-kethoxal and the high affinity between biotin and streptavidin, KAS-seq is expected to maintain its sensitivity when using low-input starting materials or primary tissue samples" \parencite[516]{bib:QuizReading}.
+        \item KAS-seq signals remain unchanged when using 10,000, 5,000, or even 1,000 HEK293T cells.
+        \item KAS-seq retains its strong TSS signals but loses some of its gene body and TES signals when mouse liver tissue is used.
+        \item Low-input of cells still yields similar enrichment efficiency.
+    \end{itemize}
+    \item KAS-seq reveals the dynamics of transciptionally engaged Pol II.
+    \item Proof that what we're seeing is related to transciptionally engaged Pol II.
+    \begin{itemize}
+        \item KAS-seq results correlate well with results from \textbf{GRO-seq} and Pol II ChIP-seq.
+        \item Experiments with inhibitors (DRB and triptolide) confirm that "the strong and sharp KAS-seq peaks on gene promoters reflect transcription initiation and pausing of Pol II near the TSS, and that KAS-seq signals at gene bodies are derived from transcription elongation" \parencite[517]{bib:QuizReading}.
+        \item Treatment of the cells with DRB before performing KAS-seq decreased peak numbers by 57\% overall, primarily in the gene body and termination regions (signals went up at the TSS).
+        \begin{itemize}
+            \item This is the expected result, since DRB is known to inhibit Pol II release and keep it stuck at the TSS.
+        \end{itemize}
+        \item Treatment of the cells with triptolide before performing KAS-seq decreased peak numbers by 93\%.
+        \begin{itemize}
+            \item This is the expected result, since triptolide is known to inhibit Pol II being recruited to and loaded onto promoter regions.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{GRO-seq}: Global run-on sequencing, which is the most widely used method to measure nascent RNA.
+    \item What the dynamics of Pol II are.
+    \begin{itemize}
+        \item KAS-seq data from the promoter-proximal and gene body regions revealed that there are four classes of genes: Those for which Pol II pauses in the promoter or doesn't pause and those for which the gene is actively transcribed or isn't.
+        \begin{itemize}
+            \item This is consistent with previously reported GRO-seq studies.
+        \end{itemize}
+        \item KAS-seq data shows considerably enriched signals at the TES.
+        \begin{itemize}
+            \item DRB removes these, so they are from Pol II elongation and pausing at the end, not some attaching-in-a-different-place artifact.
+            \item KAS-seq reads density on the terminal regions are all about the same, so KAS-seq doesn't exhibit length-dependent bias.
+            \item KAS-seq gives a higher \textbf{termination index} than Pol II ChIP-seq and GRO-seq, suggesting Pol II accumulation at the TES is greater than previously expected.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Termination index}: The ratio of the reads density at the TES downstream regions relative to the density in the promoter-proximal regions.
+    \item \textbf{RNA polymerase I}: The RNA polymerase that transcribes the 5.8S, 18S, and 28S rRNAs. \emph{Also known as} \textbf{Pol I}.
+    \item \textbf{RNA polymerase III}: The RNA polymerase that transcribes the 5S rRNAs, tRNAs, and some small RNAs. \emph{Also known as} \textbf{Pol III}.
+    \item KAS-seq detects Pol I- and Pol III-mediated transcription events and non-B form ssDNA structures in the same assay.
+    \begin{itemize}
+        \item Pol I- and Pol III-mediated transcription events are detected with Pol II ones as expected.
+        \item These two do not respond to DRB or triptolide.
+        \item Only about 2/3 tRNAs are actively transcribed, hinting at a transcription-level regulation of codon usage.
+        \item Several KAS-seq peaks could not be paired to Pol I- or Pol III-mediated transcription events under DRB and triptolide conditions.
+        \begin{itemize}
+            \item Hypothesis: These could be from other DNA forms and telomeric DNA.
+            \item Test: Used a previously reported method to predict where non-B form DNA species might exist in the genome and looked for overlaps with their mystery regions; found many.
+            \item Takeaway: Using KAS-seq to study other ssDNA-involved biological processes could be a cool avenue to pursue in future research.
+        \end{itemize}
+    \end{itemize}
+    \item Many enhancer regions are single-stranded, which correlates with higher enhancer activity.
+    \begin{itemize}
+        \item Since Pol II is known to bind at certain enhancers, we can use KAS-seq to identify enhancers that are being transcribed by Pol II.
+        \item Identified \textbf{ssDNA-containing enhancers} under DRB conditions to focus on the TSS region.
+        \item In mESCs, 25\% of enhancers are SSEs.
+        \item Two SSE subtypes: KAS-seq signals span the whole enhancer, and the signals don't.
+        \item SSEs include 94\% of super-enhancers.
+        \item Genes associated with SSEs show higher expression levels.
+        \item SSEs possess much more long-range interactions, indicating that these transcribing enhancers may possess a stronger capability to activate their target genes.
+        \item SSEs enrich unique sequence motifs (??). Thus, they have distinct sequence features and transcription factor (TF) binding potentials.
+        \item Comparison of SSEs and enhancers with high TF binding.
+        \begin{itemize}
+            \item ATAC-seq-positive enhancers are readily accessible.
+            \item 50\% of these show no or very weak KAS-seq signals in mESCs.
+            \item Genes associated with the KAS-seq-positive group show a higher expression level.
+            \item There is a distinction between SSEs and motifs that are ATAC-seq-positive but KAS-seq-negative.
+        \end{itemize}
+        \item Pol II, histone modifications, and other transcription regulatory proteins are enriched on the SSEs.
+        \item In HEK293T cells, the ratio of SSEs to general enhancers is lower, but all characteristics (overlap with super-enhancers, DRB response, and correlation with transcription regulatory proteins) are preserved.
+        \item SSEs possess distinct genomic features and unique TF-binding footprints, as per our KAS-seq analysis.
+    \end{itemize}
+    \item \textbf{ssDNA-containing enhancer}. \emph{Also known as} \textbf{SSE}.
+    \item \textbf{Protein condensate}: A highly dynamic structure formed through interactions between mediators, TFs, and other transcription coactivators that have been shown to incorporate Pol II to activate transcription.
+    \item ssDNA dynamics upon the inhibition of protein condensates.
+    \begin{itemize}
+        \item 1,6-hexanediol dissociates protein condensates.
+        \item The longer we let HEK293T cells sit in it, the more the KAS-seq signals diminish, supporting a role of protein condensate formation on transcription activation.
+        \item Novel observation: After 5 mins, there is an increase in ssDNA clustered around the TSS.
+        \begin{itemize}
+            \item Leads to a slightly increased signal on the gene body and a coinciding decrease in signal at the TSS.
+            \item The clusters form in both directions for bidirectionally transcribed genes and downstream, only, for unidirectionally transcribed genes.
+            \item As time goes by, the clusters moved toward the TESs and gradually diminished.
+        \end{itemize}
+        \item Findings validated by Pol II ChIP-seq. KAS-seq even outdoes it in some places (e.g., detection of the above \textbf{fast-responsive genes}).
+    \end{itemize}
+    \item \textbf{Fast-responsive gene}: A gene with significant ssDNA cluster formation in the TSS region at 5 minutes.
+\end{itemize}
+
+
+\subsection*{Q \& A}
+\begin{enumerate}
+    \setitemize[1]{label={--}}
+    \item The reason that KAS-Seq works on just 1000 cells as opposed to competing methods (e.g., ChIP-seq) that need millions of cells is:
+    \begin{itemize}
+        \item Kethoxal is highly reactive and specific to guanines.
+        \item "Because of the high guanine labeling reactivity of \ce{N3}-kethoxal and the high affinity between biotin and streptavidin, KAS-seq is expected to maintain its sensitivity when using low-input starting materials or primary tissue samples" \parencite[516]{bib:QuizReading}.
+    \end{itemize}
+    \item How were the authors able to assign opened DNA structures to transcription and not replication?
+    \begin{itemize}
+        \item Experiments with inhibitors (DRB and triptolide) confirm that "the strong and sharp KAS-seq peaks on gene promoters reflect transcription initiation and pausing of Pol II near the TSS, and that KAS-seq signals at gene bodies are derived from transcription elongation" \parencite[517]{bib:QuizReading}.
+    \end{itemize}
+    \item Why do the authors incubate cells with kethoxal-\ce{N3} for such a short time (5 minutes) when incubation for a longer time will capture more ssDNA while the polymerase is transcribing?
+    \begin{itemize}
+        \item Kethoxal-\ce{N3}'s high binding affinity for guanines means that it will almost immediately attach to the target species, i.e., not more than 2 minutes is really needed. Additionally, given enough time (circa 10 minutes), it will begin to attach to other species, such as L-arginine (which also has two adjacent nitrogens). This leads to undesired tagging of proteins.
+    \end{itemize}
+    \item Which other purposes can kethoxal-\ce{N3} be used for?
+    \begin{itemize}
+        \item "Provides an effective way to map RNA secondary structures by labeling guanines in single-stranded RNAs under mild conditions in live cells" \parencite[515]{bib:QuizReading}.
+    \end{itemize}
+    \item How did the authors show that the background contribution upon subjecting cells to KAS-seq was negligible?
+    \begin{itemize}
+        \item "KAS-seq performed in the absence of \ce{N3}-kethoxal or the biotinylation reagent (biotin-DBCO) resulted in negligible biotin signals shown by dot blot, nor sufficiently enriched DNA for library construction, suggesting minimum background of KAS-seq" \parencite[516]{bib:QuizReading}.
+    \end{itemize}
+    \item Why do the authors use excess kethoxal with a short reaction time rather than a small amount of kethoxal incubated for a long time?
+    \begin{itemize}
+        \item See 3.
+    \end{itemize}
+    \item Glyoxal and methyl glyoxal are known cellular metabolites. Their accumulation is known to be disease causing. Can you explain how a disease might be caused?
+    \begin{itemize}
+        \item Inhibiting protein condensation leads Pol II to rapidly release from a group of promoters (as if the cell fears using up all of its energy when there might not be as much around).
+        \item Likewise, perhaps it is possible that when there is too much protein, Pol II becomes hyperactive, consuming too much cellular energy, leading to oxidative stress and perhaps cell death.
+        \item Lead to more reactive oxygen species, hence more oxidative stress.
+    \end{itemize}
+    \item What is the major advantage of a 5-minute kethoxal exposure, i.e., giving the cells a "pulse" of excess kethoxal that is then washed away?
+    \begin{itemize}
+        \item See 3.
+    \end{itemize}
+    \item KAS-Seq scores over ChIP-Seq in terms of its ability to work with frozen tissue samples. Why? Bear in mind that in frozen samples, the transcriptional bubbles remain.
+    \begin{itemize}
+        \item "Because of the high guanine labeling reactivity of \ce{N3}-kethoxal and the high affinity between biotin and streptavidin, KAS-seq is expected to maintain its sensitivity when using low-input starting materials or \emph{primary tissue samples}" \parencite[516]{bib:QuizReading}.
+        \item Freezing denatures proteins, but does not alter transcriptional bubbles.
+    \end{itemize}
+    \item Which one(s) of the following descriptions is/are correct when we compare KAS-seq and ATAC-seq?
+    \begin{itemize}
+        \item "Notably, KAS-seq signals correlate better with H3K36me3 than ATAC-seq results do, indicating that while ATAC-seq serves as a powerful tool to probe chromatin accessibility, KAS-seq directly measures transcription activities" \parencite[516]{bib:QuizReading}.
+        \item ATAC-seq is a tool to probe chromatin accessibility more broadly.
+        \item Out of all ATAC-seq-positive enhancers, 50\% showed no (or very weak) KAS-seq signals. Thus, since KAS-seq is highly specific for ssDNA, this must mean that 50\% of ATAC-seq-positive enhancers are composed of dsDNA. Indeed, KAS-seq is more selective for ssDNA then ATAC-seq.
+    \end{itemize}
+\end{enumerate}
+
+
+\subsection*{Proposed Answers}
+\begin{itemize}
+    \item 1-2, 2-1, 3-1, 4-(1),4, 5-4, 6-3, 7-3,(4), 8-5, 9-3, 10-4.
+\end{itemize}
+
+
+
 
 \end{document}
