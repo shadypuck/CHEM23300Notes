@@ -1,0 +1,170 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{8}
+
+\begin{document}
+
+
+
+
+\chapter{Protein Engineering}
+\section{Protein Post-Translational Modification}
+\begin{itemize}
+    \item \marginnote{11/29:}Review from last time.
+    \begin{itemize}
+        \item What you need for unnatural amino acid incorporation: TGA (amber stop codon), special tRNA to both selectively bind the unnatural amino acid and TGA.
+    \end{itemize}
+    \item We now study work by Wang and Schultz (2001).
+    \item tRNA selection.
+    \begin{itemize}
+        \item If we do negative selection (correct read through generates toxic barnase), nonfunctional tRNA will cause the bacteria to survive.
+        \item If the tRNA is only charged by E. coli synthesis, the bacteria will die.
+        \item If tRNA is only charged by mj syn, your bacteria will die.
+        \item If the tRNA can be charged by both, the bacteria will die.
+        \item Now for positive selection: Nonfunctional tRNA? No survival gene, so bacteria dies.
+        \item But this time, tRNA only charged by mj syn survives! Thus, if you do negative selection and then positive selection, you will select specifically for what you want.
+        \item We can also do positive selection first and then negative selection. In this case, three bacteria survive first, and then two get eliminated.
+        \item Positive selection seldom is the opposite of negative selection; negative does specificity, positive does ??
+        \item This is a very testable topic.
+    \end{itemize}
+    \item An orthogonal tRNA.
+    \begin{itemize}
+        \item You now have a tRNA that can only be charged by exogenous amino acid residues.
+        \item Orthogonal tRNA and the right gene gives you great ampicillin resistance
+    \end{itemize}
+    \item An orthogonal aminoacyl-tRNA synthetase.
+    \begin{itemize}
+        \item Change the specificity of \emph{Mj} TyrRS so that it charges the selected tRNA with O-methyl-l-tyrosine.
+        \item The crystal structure had been determined for the homologous TyrRS from \emph{Bacillus stearothermophilus} bound to a free tyrosine residue.
+        \item Five active site residues were found to be within \SI{6.5}{\angstrom} of the \emph{para}-hydroxyl (yellow).
+    \end{itemize}
+    \item Aminoacyl tRNA synthetase selection.
+    \begin{itemize}
+        \item Similarly to before, it doesn't matter here if you do positive or negative selection first.
+        \item If you get read through for the Cm gene (chloramphenicol resistance), the bacteria survives.
+        \item Survivors contain aaRSs capable of charging any natural or unnatural aa onto the orthogonal tRNA.
+        \item We don't include the unnatural amino acid in solution for negative selection. Thus, when we have an orthogonal tRNA that only accepts O-MeTyr, these bacteria will survive because they cannot synthesize barnase. Any tRNA that incorporates an\emph{other} amino acid will synthesize barnase and die.
+    \end{itemize}
+    \item A mutant tRNA synthetase.
+    \begin{itemize}
+        \item A mutant synthetase was selected byat selectively charged the \emph{Mj} suppressor tRNA with O-methyl-L-tyrosine.
+        \item The substitution removes a hydrogen bond, creating a hydrophobic pocket.
+    \end{itemize}
+    \item O-MeTyr as UAA incorporation into DHFR.
+    \begin{itemize}
+        \item Dihydrofolate reductase (DHFR) was generated with TAG in place of the third codon and purified by metal-affinity chromatography.
+        \item Tandem MS of DHFR tryptic digest unambiguously shows complete incorporation of O-methyl-L-tyrosine in the third amino acid position.
+    \end{itemize}
+    \item UAAs incorporated \emph{in vivo}.
+    \begin{itemize}
+        \item Reactive amino acids for further post-translational modification.
+        \item Caged (photo-activable) amino acids to study kinetics and mechanisms.
+        \item Heavy atom-labeled amino acids for structural elucidaiton.
+        \item Incorporated in \emph{E. coli}, yeast, ...
+        \item Incorporating a bioorthogonal handle (alkyne) can be done.
+        \item Heavy-carbon side chain for cross-linking is possible.
+    \end{itemize}
+    \item Recoding \emph{E. coli} genome.
+    \begin{itemize}
+        \item ...
+    \end{itemize}
+    \item Summary.
+    \begin{itemize}
+        \item Strategies to increase protein functional diversity.
+        \begin{itemize}
+            \item Chemical approaches.
+            \item Site-drirected mutagenesis: Changing one amino acid to another.
+            \item Unnatural amino acid incorporation. 
+        \end{itemize}
+        \item Non-sense suppression \emph{in vitro} and \emph{in vivo}.
+        \item Orthogonal tRNA and aminoacyl tRNA synthetase.
+        \begin{itemize}
+            \item Directed evolution (negative and positive).
+        \end{itemize}
+        \item Applications of unnatural amino acid incorporation.
+    \end{itemize}
+    \item We now start on protein post-translational modification.
+    \item Humans are the most complex organisms on earth. But where does that complexity come from?
+    \item Gene number and genome size.
+    \begin{itemize}
+        \item We have 3 billion base pairs in our genome, containing 20k-25k protein coding genes. These constitute about 1\% of our genome.
+        \item Do we have the highest number of genes? No! The most common species of water flea (tiny and translucent) has more than 31k genes (8000 more than us). It has so many genes due to extensive gene duplication, even though we're more complex. We also have this, but it has it more.
+        \item \emph{C. elegans} is a model organism that is often used, especially in aging studies since it contains all of the human aging genes. It's life cycle is just much shorter and therefore easier to study. It has a similar amount of protein-coding genes to humans!
+        \item Do we have the largest genome by base pairs? The Japanese flower \emph{Paris japonica} has a 149 billion base pair genome, 50 times the size of our haploid genome.
+        \item So why are we so complex?
+        \item We are complex due to meticulous regulation of transcription and translation (the other 99\% that's not non-coding is largely regulatory; we don't fully understand it, but we know it's not just junk).
+        \item Proteome complexity also plays a role.
+    \end{itemize}
+    \item \textbf{Proteome}: The entire set of proteins that is, or can be, expressed by a genome, cell, tissue, or organism at a certain time.
+    \item \textbf{Proteomics}: The study of the proteome, such as proteome profiling.
+    \item There's genome, proteome, \textbf{transcriptome}, \textbf{kinome} (all kinases), \textbf{methylome} (all methylated DNA), etc.
+    \item \textbf{Kinome}: The complete set of protein kinases encoded in its genome.
+    \item Post-translational modifications augment proteome complexity.
+    \begin{itemize}
+        \item Chemical changes that happen after translation.
+        \item Lactylation, other example??
+        \item Common types: Phosphorylation, hydroxylation, glycosylation (N-glycosylation from Dr. Krishnan; super important for cell recognition; Dr. Tang use to have a lecture on it), Lysine acetylation, lysine ubiquitinylation (adding a 76-77 aa peptide instead of a small functional group; usually precedes degradation).
+        \item You don't have to memorize these; if tested, we will be given a chemical structure.
+    \end{itemize}
+    \item Protein phosphorylation.
+    \begin{itemize}
+        \item Catalyzed by kinases.
+        \item Within the kinase active site, you have a base that deprotonates the hydroxyl group, leading the \ce{O-} nucleophile to attack the $\gamma$ phosphate in an ATP via nucleophilic acyl substitution.
+        \item Protein phosphatase removes phosphates from phosphorylated protein residues, resulting in...
+    \end{itemize}
+    \item Functions of protein phosphorylation.
+    \begin{itemize}
+        \item 1/3-2/3 of the proteome in eukaryotes can be phosphorylated.
+        \item Not all of this leads to activity (as far as we know at this point).
+        \item Phosphorylation alters...
+    \end{itemize}
+    \item The human kinome comprises 518 kinases.
+    \begin{itemize}
+        \item Tyrosine kinases have their own corner of the evolutionary phylogenetic tree.
+        \item There are 48 FDA approved kinase inhibitors; more than half are for tyrosine kinases.
+        \item What's the difficulty? Do we want to inhibit one tyrosine kinase or many? Probably just one, belonging to one protien. Thus, \emph{specificity} is the largest challenge of developing novel kinase inhibitors.
+        \item Gleevic (or Imatinib) is a drug for Leukemia. Once the...
+    \end{itemize}
+    \item MAP kinase pathways: An example of kinase cascade complexity.
+    \begin{itemize}
+        \item MAPKKKK lol.
+        \item One protein can be phosphorylated by many kinases.
+    \end{itemize}
+    \item Mass spectrometry-based \textbf{phosphoproteomics}.
+    \begin{itemize}
+        \item ...
+        \item There are about 200 phosphorylation sites in the human genome.
+        \item We don't know the functions of most phosphorylation sites.
+    \end{itemize}
+    \item \textbf{Phosphoproteomics}: A branch of proteomics that characterizes phosphorylated proteins.
+    \item How can cellular substrates of specific kinases be identified?
+    \begin{itemize}
+        \item \emph{In vitro} peptide microarray screens.
+        \item You take a chip, divide it into 1000-2000 wells.
+        \item Each well encodes a specific peptide sequence.
+        \item Then you flow on the kinase you want to study and supply radioactive \ce{{}^32P}. Then you can take a radiograph of the chip.
+        \item No longer widely used because it's not super biologically relevant.
+    \end{itemize}
+    \item Tyrosine kinases.
+    \begin{itemize}
+        \item Shokat's bump and hole strategy for kinase substrate identification.
+        \item His lab developed one of the first covalent drugs for ?? inhibition (cancer related).
+        \item Make ATP larger so that...
+    \end{itemize}
+    \item Interaction between mutated kinase and modified ATP.
+    \begin{itemize}
+        \item ...
+    \end{itemize}
+    \item Kinase/ATP analog engineering allows substrate tagging in cell lysates but not in live cells.
+    \begin{itemize}
+        \item ...
+    \end{itemize}
+    \item Use chemical tagging...
+\end{itemize}
+
+
+
+
+\end{document}
