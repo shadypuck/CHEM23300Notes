@@ -1,0 +1,193 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{7}
+
+\begin{document}
+
+
+
+
+\chapter{Bioengineering Small Molecules}
+\section{RNA Interference and CRISPR}
+\begin{itemize}
+    \item \marginnote{11/15:}For exam prep on the last four lectures, look at past exams; there will not be a pset on them.
+    \item Tang used to spend 10 lectures on biotechnology. She's gonna try to cover 6-7 and cut out some of the details in the last four lectures.
+    \item Goal: She wants to show us what's out there so we know to look for more details.
+    \item Controlling genetic information flow.
+    \begin{itemize}
+        \item In addition to DNA, RNA, and protein sequence diversity, how to \emph{regulate} transcription and translation is even more important for higher organisms.
+        \item Approaches to regulate/control DNA transcription, RNA translation, and protein activities are promising research tools and drug candidates.
+        \item How we can perturb this process:
+        \begin{itemize}
+            \item Suppose we want to either up- or downregulate the level of a protein.
+            \item If we want to do this, we do have to do something specifically (we don't want to affect everything).
+            \item One strategy is a specific inhibitor (this is the most successful thus far).
+            \item Another approach is to degrade proteins (not regulate it, but change its abundance). Protac is an example; one part binds, the other part attracts a degrader.
+            \item Another: Antibodies. Different ways to use them PD-1 and PD-L1 example from cancer therapy (what we do in the Lin lab!). Outcome can be elimination of an entire cell.
+            \item Upregulation is more difficult at every stage, and thus more limited. There are some examples, but nothing is generally applicable.
+            \item Upregulating protein levels is hard to do by injection; your proteases will usually degrade anything injected. Even proteins wrapped in lipid bylayers are liable to face difficulty entering cells. Notable example: Insulin; only works tho because this protein exists in the bloodstream in general, not in the cells.
+            \item At the RNA level, we can degrade/cleave RNA, inhibit translation, etc. to downregulate.
+            \item We can stabilize the RNA and upregulate translation at the ribosomes, in theory. V hard to do tho.
+            \item Dickinson developed a technology to upregulate translation in a cool way.
+            \item mRNA delivery is another way to upregulate. Tried for 10 years but not successful until recently via mRNA vaccines.
+            \item At the DNA level, we can downregulate by changing the epigenetics; methylation corresponds to downregulation; demethylation corresponds to upregulation.
+            \item DNA editing/knockout to downregulate.
+            \item Gene therapy allows you to add genes. Why does this even work? The genes that need to be edited aren't that lethal because they didn't kill us in the womb??
+        \end{itemize}
+        \item What level is more programmable?
+        \begin{itemize}
+            \item The first programmable interference that went to clinical trials was at the RNA level. At the RNA level, we can use W-C interactions to our benefit.
+            \item At the protein level, this is harder to get because every protein has a slightly different shape. We can't yet design protein inhibitors; we still find them by screening.
+            \item Histone binders at the DNA level help us a lot.
+            \item Today's lecture: Programmable degradation and inhibition at the RNA level; DNA editing. Also RNA inhibit translation and gene therapy to some extent??
+        \end{itemize}
+    \end{itemize}
+    \item What is RNA interference (\textbf{RNAi})?
+    \begin{itemize}
+        \item 1995 (initial observation): Guo and Kemphues introduce antisense RNA into \emph{C. elegans} (worms) to suppress gene expression.
+        \item 1998 (correct mechanism): Fire and Mello show that dsRNA, not sense or antisense ssRNA, led to degradation of homologous mRNA. The effect is so longlasting that you observe it even in the progeny.
+        \item Intriguing properties of RNAi: ~100\% gene inhibition, highly specific, only a few dsRNA molecules are required (catalytic?)
+        \item Mechanism: Ainylam and Ionis are companies researching this technology. Their stock price has increased much more quickly than the Dow Jones average.
+        \item Timeline:
+        \begin{itemize}
+            \item RNAi discovery, then first RNAi clinical trial a couple of years later.
+            \item Nobel prize 2006 to Fire and Mello (just 8 years later!).
+            \item This ignites the field on fire and causes big pharma to enter. They buy up many small companies.
+            \item Several advanced trials fail, causing big pharma to leave.
+            \item Innovation of delivery tech revitalizes the field around 2012-2013.
+            \item There were still some more hiccups, but in 2019, the first RNAi therapeutics were approved (Onpattro).
+            \item Alnylam's stock price is still doing very well. Ionis (formerly ISIS lol) has switched focus to targeting SMA (spinal muscular atrophy). This disease is caused by one particular DNA mutation. They have a DNA stabilization gene though that causes transcription to occur correctly.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{RNAi}: Degradation of mRNA triggered by homologous dsRNA.
+    \item Gene silencing in \emph{C. elegans}.
+    \begin{itemize}
+        \item Fire and Mello targeted specifically the unc-22 gene. If the gene is intact, the organism won't twitch; if it is disrupted, the organism will twitch. Because \emph{C. elegans} is so simple, there are only a few phenotypes you can follow.
+        \item Sense and anti-sense RNA show no pheonotype when gel-purified prior to injection.
+        \item When injected simultaneously or in rapid succession, sense + antisense RNA gives altered phenotypes (worms twitch).
+        \item dsRNAs that target introns do not affect phenotype, suggesting that the silencing agent acts on spliced, mature mRNAs.
+        \item ...
+        \item The gene silencing occurs in \emph{C. elegans} when individuals are fed bacteria that express dsRNA targeting GFP.
+        \item Embryos are affected by dsRNA, as seen by comparison with RNAi-defective individuals.
+    \end{itemize}
+    \item If you inject DNA into yourself, your innate immune response will be activated. If you injest it, you will degrade it and use it as starting materials for building your own genome.
+    \item Why do we need to start with dsRNA?
+    \item Dicer (a protein) chops dsRNA into siRNAs.
+    \begin{itemize}
+        \item RNAi can be triggered by...
+    \end{itemize}
+    \item Dicer structure.
+    \begin{itemize}
+        \item Dicer acts as a "molecular ruler."
+        \item The RNA-binding PAZ domain lies \SI{65}{\angstrom} from the catalytic domain.
+        \begin{itemize}
+            \item ...
+        \end{itemize}
+    \end{itemize}
+    \item siRNAs target mRNA for degradation by RISC.
+    \begin{itemize}
+        \item The RNA-Induced Silencing Complex (RISC) is a protein-RNA complex that directs siRNAs to their homologous target mRNAs.
+        \item How does RISC decide to incorporate the target strand or the complementary strand? Open question, but it looks rn like both are used so some is wasted.
+        \item Argonaute is the RISC...
+    \end{itemize}
+    \item The RNA trigger must be double stranded and highly homologous.
+    \emph{picture; what's injected vs. the interference you get}
+    \begin{itemize}
+        \item Experimental design: Correct hypothesis is you need double-stranded RNA to get interference.
+        \item We want to target two genes: GFP and un-22. We can introduce interference RNA for either in all of its forms (dsDNA, ssDNA, with a loop, etc.).
+        \item See the figure for verification that dsDNA is importance.
+        \item dsGFP still activates even with an ss sense/antisense loop appended.
+        \item If you inject dsGFP plus sense/antisense loops, your unc-22 interference varies: We need both to be injected simultaneously and in high enough concentrations so that after dsGFP gets edited out, the sense and antisense strands are present in high enough concentrations to hybridize. If tested and we say yes, that's perfectly fine; it's an experimental condition thing.
+        \item The farther your gene is from the wildtype, the less interference you get because less complementarity means less binding.
+    \end{itemize}
+    \item RdRP may enable transitive RNAi.
+    \begin{itemize}
+        \item Why the $3'$ OH group is important: The RNA-dependent RNA polymerase (RdRP) is essential for RNAi in \emph{C. elegans}. RdRP use RNA to synthesize more RNA; \emph{C. elegans} uses RNA to synthesize DNA?? Example: COVID-19 uses RdRP to replicate its genome. Remdesivir (the initial COVID drug) inhibits RdRP.
+        \item 80\%-90\% inhibition in humans, but also not as long-lasting.
+    \end{itemize}
+    \item Translation inhibition: miRNA.
+    \begin{itemize}
+        \item MicroRNAs: Small regulatrory RNAs that block translation of mRNA.
+        \item Precursors are $\sim 70$ bp hairpin stem loops processed by Dicer into $\sim 22$ bp miRNAs.
+        \item RISC uses the antisense strand of the miRNA to target mRNA and prevent translation.
+        \item Some RISC components for miRNAs are different than those required for RNAi.
+    \end{itemize}
+    \item How does RISC discriminate between RNAi and translation inhibition?
+    \emph{table}
+    \begin{itemize}
+        \item Predicting the correct result here will be easy because we know the correct hypothesis, but in research, dreaming up the correct hypothesis and designing an experiment to exclusively prove it is very difficult. Example with ringing a bell, crab runs away, break the crabs legs, crab doesn't run after bell rung, therefore: crab hears through its legs. Things like this happen quite often in research.
+        \item Hypothesis: Perfect siRNA complementation leads to RNA degredation/cleavage; some siRNA complementation leads to translation inhibition.
+        \item Engineered siRNA and miRNA lead to RNA degradation; natural (imperfect ones) just downregulate protein levels. All downregulate protein levels (degredation $\Rightarrow$ protien downreuglation)
+        \item This is a very well designed experiment; Tang encourages us to go through it in detail.
+    \end{itemize}
+    \item RNAi summary.
+    \begin{itemize}
+        \item ...
+    \end{itemize}
+    \item Programmed DNA editing: A search problem.
+    \begin{itemize}
+        \item ...
+    \end{itemize}
+    \item General approaches for gene editing.
+    \begin{itemize}
+        \item ZFNs, TALENs, and CRISPR/Cas 9 can do targeted double strand breaks (DSBs).
+        \item The repair process is typically done by non-homologous end joining (NHEJ) without caring too much which ends are joined; you may have insertions, deletions, or other changes. This is Gene Disruption by NHEJ.
+        \item Gene correction by homology-directed repair (HDR) if you have WT donor DNA. Less efficient.
+    \end{itemize}
+    \item Genome engineering has a long history.
+    \begin{itemize}
+        \item Begins with the discovery of zinc fingers. If you have a long strand of zinc fingers, it is possible to locate one specific DNA sequence.
+        \item Timeframe of knockout mouse came down from 10 years to six months using ZFs.
+        \item Knockout mouse is knocking out a specific mouse gene. Can sustain a whole lab, because then you're the only lab that can really investigate the effect of that gene.
+        \item One TALEN molecule recognizes one base pair (2009).
+        \item CRISPR arises in 2012.
+    \end{itemize}
+    \item Programmable DNA binding domains: Zn fingers.
+    \begin{itemize}
+        \item Each ZF: $\sim 30$ amino acid residues, binds a zinc atom.
+        \item Highly prevalent in eukaryotes.
+        \item Each ZF usually recognizes 3-4 bp sequences: It inserts its $\alpha$-helix into the major groove of the double helix.
+        \item Can be engineered for different sequences, but design and selection are laborious and time consuming.
+        \item Normally, 3-6 such ZFs are linked together in tandem to generate a ZFP.
+    \end{itemize}
+    \item Zn finger nucleases.
+    \begin{itemize}
+        \item FokI nuclease domain: Dimer to function, no sequence specificity.
+        \item You get cleavage somewhere in the middle, but not single-nucleotide resolution.
+    \end{itemize}
+    \item Zn finger nucleases in clinical trials.
+    \begin{itemize}
+        \item Primarily driven by Sangamo Therapeutics.
+        \item Good data for Hemophilia.
+        \item Partners: Pfizer, Sanofi, Kite-Gilead, Takeda, etc.
+        \item Zn fingers developed so far before CRISPR that they still have a significant market interest.
+    \end{itemize}
+    \item TALENs: Transcription activator-like effector nucleases.
+    \begin{itemize}
+        \item Arrived too close to the advent of CRISPR to have a significant market share today.
+        \item The general structural organization is similar to that of ZFs...
+    \end{itemize}
+    \item One of the most beautiful structures of all time.
+    \begin{itemize}
+        \item TALE structure: 11 monomers that wrap around a double-helical structure. Different amino acids interact with different kinds of bases.
+    \end{itemize}
+    \item Problems with ZFNs and TALENs:
+    \begin{itemize}
+        \item Difficult to clone (highly repetitive sequences).
+        \item Some context dependency.
+        \item High "activation" barrier to widespread use.
+    \end{itemize}
+    \item CRISPR was initially found by microbiologists researching yoghurt in the 1980s.
+    \begin{itemize}
+        \item They want fermentation plus phage protection for their bacteria.
+        \item The exponential trend of CRISPR hasn't stopped, and basically no one is working on Zn fingers and TALENs any more.
+    \end{itemize}
+    \item More on CRISPR next lecture.
+\end{itemize}
+
+
+
+
+\end{document}
