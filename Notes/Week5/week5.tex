@@ -35,7 +35,7 @@
         \item Suppose you have a strand of DNA and you want to know the sequence of a 150 bp bit.
         \item You need sufficient and sufficiently pure starting material to begin. Thus, if we have 50-100 copies of the DNA from extraction and mince them, the pieces will come out in different lengths.
         \item But we need way, way more copies to do meaningful chemistry and, moreover, we need only copies of the one specific set of base pairs.
-        \item Solution: Polymerase chain reaction uses RNA polymerase, dNTPs, \ce{Mg^2+}, and some other things to make many many copies of just the 150 bps you're interested in.
+        \item Solution: Polymerase chain reaction uses DNA polymerase, dNTPs, \ce{Mg^2+}, and some other things to make many many copies of just the 150 bps you're interested in.
         \item You need a primer (about 20-30 base pairs; what is necessary for specificity) that will sit on the beginning of the region.
         \item PCR uses a thermal cycler (a fancy oven that heats and cools between temperatures of your choosing at a rate of your choosing).
         \item DNA in an Eppendorf tube in the thermal cycler. We heat it to unwind the strands and then break the hydrogen bonding, yielding single-stranded DNA. Our forward and reverse primers sit on the single strands at the beginning of our target region. DNA polymerase attaches and copies until it falls off. Then we repeat.
@@ -104,7 +104,7 @@
         \end{itemize}
         \item Know this for historical reasons; came out second, but was adopted first.
         \item Start with a bunch of copies (circa 1 million) of a DNA strand obtained using bacterial cloning.
-        \item Label the $5'$ end of each sequence with \ce{{}^32P}.
+        \item Label the $5'$ end of each sequence with \ce{{}^32P}. This will allow for visualizing the strands at the conclusion of the procedure using autoradiography and X-ray film.
         \item Divvy up the labeled DNA between four Eppendorfs. To each tube, add a chemical that is selective for one or two nucleobases. Add just enough of the chemical so that every strand will react once. Remember that most strands will not react. Then introduce hot piperidine (Yamuna said hydrazine??) to cleave the strand right before (Yamuna says after??) the modification.
         \item Chemicals:
         \begin{align*}
@@ -113,7 +113,7 @@
             \text{T}+\text{c} &= \ce{N2H4}&
             \text{C} &= \ce{N2H4 + NaCl}
         \end{align*}
-        \item Running these mixtures on a gel will lead to bands corresponding to each cut and unreacted strands.
+        \item Running these mixtures on a gel leads to bands for each cut and unreacted strand.
         \item The strand that travels the farthest (is the lightest/shortest) corresponds to the first nucleobase. The strands that travel the least are the unreacted strands.
         \begin{itemize}
             \item Example 1: No band in the $\text{T}+\text{c}$ column and a band in the $\text{C}$ columns? Cytosine.
@@ -717,7 +717,7 @@
         \item This allows hundreds of millions of strands to be sequenced in a massively parallel process.
         \item After the completion of the first read, the read product is washed away. Then, an index-1 read primer is introduced and hybridized to the template. After completion of the index read, it is washed off.
         \item The $3'$ end is deprotected, allowing for bridging. Index 2 is read in the same manner as index 1. Polymerases extend the second flow cell oligo to a double-stranded bridge.
-        \item After linearization of the bridge and blocking of the $3'$ ends, the original forward strand is cleaved off, leaving only the referse strand.
+        \item After linearization of the bridge and blocking of the $3'$ ends, the original forward strand is cleaved off, leaving only the reverse strand.
         \item Read 2 begins with the introduction of the read 2 sequencing primer. As with read 1, the sequencing steps are completed until the desired read length is achieved.
         \item Then, the read 2 product is washed away.
     \end{itemize}
