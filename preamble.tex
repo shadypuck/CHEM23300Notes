@@ -15,6 +15,7 @@
 \usepackage{bm}
 \usepackage{mhchem,chemfig}
 \usepackage[hidelinks]{hyperref}
+\usepackage{subfiles}
 
 \MakeOuterQuote{"}
 
@@ -45,7 +46,7 @@
 \DeclareSIUnit{\angstrom}{\text{\AA}}
 \DeclareSIUnit{\calorie}{cal}
 
-\addbibresource{../main.bib}
+\addbibresource{\subfix{../main.bib}}
 \DefineBibliographyStrings{english}{bibliography={References}}
 
 \usetikzlibrary{positioning}
@@ -58,5 +59,3 @@
 \DeclareMathOperator{\pKa}{p\textit{K}_a}
 
 \setchemfig{atom sep=2em,bond offset=2pt,cram width=2pt,bond join=true}
-
-\usepackage{subfiles}

@@ -288,5 +288,224 @@
 
 
 
+\section{Final Review Sheet}
+\begin{itemize}
+    \item \marginnote{2/2/24:}Watson-Franklin-Crick vs. Wobble interactions.
+    \begin{itemize}
+        \item The reason some codons are the same is in case normal Watson-Franklin-Crick interactions get supplanted by Wobble interactions, we don't want the amino acid paired to change.
+    \end{itemize}
+    \item At physiological pH, only phosphates are charged.
+    \item We can get tautomerization among nucleoside bases; think keto-enol.
+    \item Puckomers: Ribose conformers.
+    \item Why phosphate is cool: Multivalent, cannot cross biological barriers, kinetically stable to hydrolysis, thermodynamically unstable, kinetically unstable with catalyst.
+    \item A-, B-, and Z-DNA.
+    \item G-quadruplexes.
+    \item Tagging proteins with GFP, and RNA with the spinach aptamer.
+    \item DNA binding proteins.
+    \begin{itemize}
+        \item Interact w/ DNA major + minor groves.
+        \item Leucuine zipper and zinc finger; precursors to CRISPR.
+        \item Intercalators: Like the toxic molecule ethidium bromide.
+        \begin{itemize}
+            \item Design safer ones by making bigger molecules; ones that still intercalate DNA but don't penetrate the skin as easily.
+        \end{itemize}
+    \end{itemize}
+    \item DNA replicase.
+    \begin{itemize}
+        \item One \ce{Mg^2+} stabilizes the dNTP's two extra phosphate groups; the other stabilizes the acyl substitution intermediate.
+        \item Repairs the strand by sliding back to check previous bases before moving on.
+    \end{itemize}
+    \item The causes of mutations.
+    \begin{itemize}
+        \item Natural mismatching and tautomerization.
+        \item Deamination of exocyclic amines.
+        \item Depurination and cleavage.
+    \end{itemize}
+    \item Four strategies of DNA repair.
+    \begin{itemize}
+        \item Direct reversal/repair: Enzymes catalyze the reverse reaction of whatever nefarious transformation (e.g., deamination) took place.
+        \item Base excision repair: Take out a base, put in a new one.
+        \item Nucleotide excision repair: Take out a string of nucleotides, synthesize a new one.
+        \item Mismatch repair: Take out a mismatch on the \emph{unmethylated} strand, resynthesize.
+    \end{itemize}
+    \item Bioorthogonal chemistry and the click reaction (azide plus alkyne).
+    \item Promoter regions (for RNA synthesis).
+    \item Nucleic acids may have catalyzed reactions in early forms of life.
+    \item \emph{Tetrahymena} Catalytic RNA.
+    \item Mechanism of the ribosome: A2486 catalyzes protein formation via proton transfer.
+    \item Bisulfite chemistry to detect methylated cystine.
+    \begin{itemize}
+        \item Bisulfite plus heat converts cystine to uracil, so sequence once on its own and once after bisulfite chemistry and look for which base pairs don't change.
+    \end{itemize}
+    \item Almost all amino acids are in their chiral L-form.
+    \begin{itemize}
+        \item We can build D-proteins, though.
+        \item These cannot be degraded by natural protease and hence are much more stable.
+    \end{itemize}
+    \item Native chemical ligation: Connecting two peptides with an amide bond.
+    \item Know a bit about how to draw nucleosides, and the amino acids.
+    \begin{itemize}
+        \item Achiral.
+        \begin{itemize}
+            \item Glycine: Flexible. GGS linkers are nice.
+        \end{itemize}
+        \item Hydrophobic.
+        \begin{itemize}
+            \item Ala/A: Simple; good to mutate things to to determine importance. Often works as an inert filler.
+            \item V,L,I: Use these for bulk, e.g., to decrease the size of active sites and make pockets smaller.
+            \item M: Good start codon. Part of the cofactor SAM, a methyl donor.
+            \item Proline: Inflexible.
+            \item Phe/F, Tyr/Y, Trp/W aren't too interesting.
+        \end{itemize}
+        \item Charged.
+        \begin{itemize}
+            \item Acids deprotonated and bases protonated at physiological pH.
+            \item Asp/D, Glu/E, Lys/K, and Arg/R aren't too interesting.
+            \item His/H is a great base/acid for a proton shuffle.
+        \end{itemize}
+        \item Polar.
+        \begin{itemize}
+            \item Ser/S can be phosphorylated (just like Y). Often a nucleophile in protein active sites.
+            \item Thr/T, unimportant.
+            \item Cys/C forms disulfide bridges, unlike M.
+            \item Asn/N is often a metal coordinate (think \ce{Mg^2+} ions in DNA polymerase!).
+            \item Gln/Q is similar to N.
+        \end{itemize}
+    \end{itemize}
+    \item Protein structure in 4 levels: Primary, secondary, tertiary, and quaternary.
+    \item Serine protease.
+    \begin{itemize}
+        \item Asp/D, His/H, and Ser/S work together to cleave a protein.
+    \end{itemize}
+    \item Structural biology stuff.
+    \begin{itemize}
+        \item Lots of XRD.
+        \item LCLS.
+        \item NMR (for in-situ; higher dimensional).
+        \item CryoEM (for big stuff).
+        \item AlphaFold 2.
+    \end{itemize}
+    \item PCR and thermal cycling with primer.
+    \item DNA sequencing.
+    \begin{itemize}
+        \item Maxam-Gilbert.
+        \begin{itemize}
+            \item This is the one with variable cleavage reagents and separation in a gel.
+        \end{itemize}
+        \item Sanger.
+        \begin{itemize}
+            \item Spike a bit of ddNTP into cloning bath to stop cloning at a certain point.
+            \item Either do sequential (ddATP, ddGTP, \dots) or parallel (ddNTPs plus fluorophore).
+        \end{itemize}
+        \item Pyro (454).
+        \begin{itemize}
+            \item Create a bunch of copies, immobilized via biotin and streptavidin beads.
+            \item Add a specific type of dNTP to be incorporated, releasing a PPi, which gets converted to ATP and a flash of light that can be detected by two consecutive enzymes.
+            \item Get rid of excess dNTP and repeat.
+            \item You can do this in a well plate to run many tests in parallel.
+            \item Important for neanderthal genome.
+        \end{itemize}
+        \item Illumina.
+        \begin{itemize}
+            \item Currently the most important.
+            \item Bridging boi.
+            \item Read each strand individually by flashes of light, though there will be multiple copies in each cluster, so multiple photons will be released.
+            \item We then sort through the data to align all pairs.
+        \end{itemize}
+        \item SMRT.
+        \begin{itemize}
+            \item Fix DNA polymerase in a zero-mode waveguide (tiny pore), run a sequence through it recording flashes as each dNTP + fluorophore is added.
+            \item DNA polymerase is slowed down to a recordable speed by attaching a protecting group to each dNTP's $3'$ site.
+        \end{itemize}
+        \item Nanopore.
+        \begin{itemize}
+            \item Still in development.
+            \item Electrical rather than chemical.
+            \item A single strand passes through a pore; each dNTP blocks ion flow through the pore to a different, unique, detectable extent.
+            \item Allows for direct sequencing of methylated bases, too!
+        \end{itemize}
+    \end{itemize}
+    \item The fluid mosaic model of the plasma membrane is \emph{very wrong}.
+    \begin{itemize}
+        \item 500-2000 different kinds of lipid molecules.
+        \begin{itemize}
+            \item Different alkyl chain lengths and degrees of unsaturation.
+            \item Different head groups, too.
+        \end{itemize}
+        \item 17-23\% cholesterol.
+        \item Asymmetric; different things face in vs. out.
+        \item There are many different ways a protein can stick into the plasma membrane.
+        \begin{itemize}
+            \item Single-pass (via an amphipathic helix), multi-pass, lipid anchoring, GPI anchoring, $\beta$-barrel proteins.
+            \item Predict transmembrane domains with the hydropathy index.
+        \end{itemize}
+        \item Know when a cell has died via annexin staining; PS phospholipids are constantly flipped inward while the cell is alive, but when it dies, it can no longer do this, signalling to immune cells that it is dead.
+        \item Extracellular proteins can bend the plasma membrane.
+    \end{itemize}
+    \item There are various kinds of transporters and transportation.
+    \item Chaperones bring misfolded proteins to the right place and allow them to fold correctly.
+    \item Remember topologically equivalent compartments.
+    \item Isolating organelles by progressively fast centrifugation.
+    \item N-terminus localization sequence for proteins.
+    \item Nuclear pores.
+    \begin{itemize}
+        \item Membrane ring proteins to bend nuclear membrane around pores.
+        \item Cytosolic fibrils and nuclear basket.
+        \item Nuclear import adapter proteins.
+        \item Ran-GTP/Ran-GAP in and Ran-GDP/Ran-GEF out.
+    \end{itemize}
+    \item Mitochondrial transport.
+    \begin{itemize}
+        \item TOM: Outer to interluminal.
+        \item TIM: Interluminal to inner.
+        \begin{itemize}
+            \item Locks together with TOM to do outer to inner directly.
+            \item Translocation sequences get cleaved once inside inner matrix.
+            \item Inner membrane protein? If TIM encounters a stop transfer sequence.
+            \begin{itemize}
+                \item Multipass? Stop transfer sequence in the middle.
+            \end{itemize}
+        \end{itemize}
+        \item SAM: Insertion into outer membrane.
+        \begin{itemize}
+            \item Takes proteins brought to interluminal space by TOM.
+        \end{itemize}
+        \item OXA: Interluminal to inner.
+        \begin{itemize}
+            \item Can do in inner membrane if it encounters a stop transfer sequence in a protein in the matrix.
+        \end{itemize}
+        \item To get into the interluminal space, either insert into inner membrane and cleave w/ signal peptidase \emph{or} get in through TOM and fix there with Mia40 (forming disulfide bridges between different proteins that prevent it moving further into the matrix).
+    \end{itemize}
+    \item Getting proteins into ER lumen.
+    \begin{itemize}
+        \item SRP grabs ribosome with growing peptide with signal sequence, brings it to ER membrane receptor, portein grows into ER lumen and is left there.
+    \end{itemize}
+    \item Getting proteins into the ER membrane.
+    \begin{itemize}
+        \item Snare proteins grab C-terminus localization sequences. Get1, Get2, Get3 over to ER membrane and insertion.
+    \end{itemize}
+    \item GPI anchors.
+    \begin{itemize}
+        \item Lipids to phosphate to many sugars to protein.
+    \end{itemize}
+    \item Golgi.
+    \begin{itemize}
+        \item Stacks are cisterni.
+        \item Golgi cisternae kind of grow up. Either the \textbf{maturation model} or the \textbf{vesicle transport model}.
+    \end{itemize}
+    \item RNA interference.
+    \begin{itemize}
+        \item Degradation of mRNA triggered by homologous dsRNA.
+        \item Something with double- vs. single-stranded RNA.
+    \end{itemize}
+    \item Unnnatural amino acid incorporation.
+    \begin{itemize}
+        \item CRISPR-Cas9, guide RNA, selective cleaving and then cellular repair integrates what you want.
+        \item Unnatural amino acid incorporation via bioorthogonal tRNA to allow you to control protein structure.
+    \end{itemize}
+\end{itemize}
+
+
+
 
 \end{document}
